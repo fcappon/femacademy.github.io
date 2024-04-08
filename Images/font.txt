@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://use.typekit.net/pql0kng.css">
+
+font-family: "anona", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "anona", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "anona", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "anona", sans-serif;
+font-weight: 700;
+font-style: italic;

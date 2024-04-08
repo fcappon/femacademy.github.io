@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fem Academy - Unlock Your Academic Potential</title>
+    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="https://use.typekit.net/mst2wge.css">  
+    <link rel="stylesheet" href="https://use.typekit.net/pql0kng.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="nav-container">
+                <img src="/Images/ShortLogo.png" alt="Fem Academy Logo" class="logo">
+                <div class="contact-info">
+                    Contact us - <a href="mailto:hello@femacademy.com">hello@femacademy.com</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="welcome-section">
+        <div class="text-content">
+            <h1>We Support Your Learning</h1>
+            <p>Here at Fem Academy, we believe that every student has the potential to excel in these fascinating fields. Our personalized tutoring approach is tailored to fit your unique learning style, pace, and goals. Whether you're grappling with complex theories or seeking to sharpen your problem-solving skills, our expert guidance will transform the way you learn and perceive these subjects. Join us, and embark on a path to academic success and newfound confidence in Physics and Mathematics.</p>
+            <button type="button"class="get-started-button" onclick="smoothScroll(document.getElementById('contact-form'))">Get Started</button>
+        </div>
+        <div class="image-content">
+            <img src="Images/LeaderImage.png" alt="Online Tutoring From the Comfort of your Home Physics, Maths and Programming All Levels">
+        </div>
+    </div>
+    
+    <div class="subjects-container-header">
+        <h2>We focus on nurturing and developing skills in the following areas</h2>
+    </div>
+
+    <div class="wrapper">
+        <div class="content">
+            <!----Physics----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconPhysics.png" alt="Physics" class="subject-icon">
+                </div>                
+                <h3>Physics</h3>
+                <span>GCSE and A-Level</span>
+            </div>
+    
+            <!----Maths----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconMath.png" alt="Mathematics" class="subject-icon">
+                </div>                
+                <h3>Mathematics</h3>
+                <span>GCSE and A-Level</span>
+            </div>
+
+            <!----Programming----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconProgram.png" alt="Programming" class="subject-icon">
+                </div>                
+                <h3>Programming</h3>
+                <span>Python and MATLAB</span>
+            </div>            
+</div>
+        <div class="find-out-more">
+            <button class="learn-more-button"><a href="./subjects.html">Find out More</a></button>
+        </div>
+
+</div>
+
+<div class="About-me">
+    <h2>About Me</h2>
+    <p>At Fem Academy, I, Femke, am deeply committed to making learning an interactive, engaging, and insightful journey. With an academic background rich in Engineering Physics, Biomedical Engineering, and Electronics and a PhD, I bring a wealth of knowledge and a unique perspective to the table. My experience as an associate fellow in higher education and current role lecturing foundation year in engineering mathematics and MATLAB programming has honed my ability to communicate complex concepts in a clear, understandable manner.</p>
+</div>
+
+
+
+<div class="testimonials-wrapper">
+    <h2>Testimonials</h2>
+    <div class="testimonials" id="testimonials-carousel">
+        <div class="Testimonial-container">
+            <img src="Images/openquote.png" class="quote-image">
+            <p>“Femke was brilliant with my daughter offering her a session that perfectly met her needs for her college course. Her teacher was clear and well explained, she was also personable and engaging. I would whole heartily recommend.”</p>    
+            <span>Clara</span>
+        </div>
+        
+        <div class="Testimonial-container">
+            <img src="Images/openquote.png" class="quote-image">
+            <p>“Fem is great - helped Jonny with A'Level Physics and Maths, helping him from Bs to strong As. She explains well, calm mannered, and recommended!”</p>    
+            <span>Simon</span>
+        </div>
+
+        <div class="Testimonial-container">
+            <img src="Images/openquote.png" class="quote-image">
+            <p>“Since we have started the lessons our daughters school grades improved dramatically. Femke always applies the up to date study materials, she uses interactive online platforms to deliver the lessons.”</p>    
+            <span>Jenia</span>
+        </div>
+
+        <div class="Testimonial-container">
+            <img src="Images/openquote.png" class="quote-image">
+            <p>“We are so happy that Femke is sharing our point of view to invoke an interest to the subjects rather than only focusing on the exam grades.”</p>    
+            <span>Chris</span>
+        </div>
+
+        <div class="Testimonial-container">
+            <img src="Images/openquote.png" class="quote-image">
+            <p>“I received my mark back for the coding assignment and got 80% which, considering where I was with MATLAB I am very pleased. Thanks again for all of your help!”</p>    
+            <span>Iwan</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="contact">
+    <div class="left-column">
+        <h2>Ready to Transform Your Learning Experience?</h2>
+        <p>Connect with Fem Academy today and unlock a personalized learning journey tailored just for you. Whether you're preparing for exams, looking to deepen your understanding, or eager to explore new areas, I'm here to guide and support you every step of the way.</p>
+    </div>   
+    <div class="right-column" id="contact-form"> 
+        <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="col">
+                  <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+              <input type="checkbox" name="newsletter"><label for="newsletter"> I would like to subscribe to the monthly newsletter and stay up to date about any upcoming courses and worskhops.</label>
+            </div>
+            <button type="submit" class="get-started-button">Submit Form</button>
+          </form>
+    </div>    
+</div>
+
+<footer class="footer">
+        <p>Contact us at <a href="mailto:hello@femacademy.com">hello@femacademy.com</a></p>
+</footer>
+
+    <!--JavaScript -->
+    <script src="/script.js"></script>
+</body>
+</html>

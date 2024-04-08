@@ -1,0 +1,262 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "acumin-pro";
+}
+
+h1 h2 h3 {
+    font-family: "expressway";
+    padding-bottom: 40px;
+
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    width: 100%;
+    background-color: #ffffff; /* or any background color you prefer */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #E4CDBD; /* Soft line under the header */
+}
+
+.logo {
+    max-height: 50px; /* Adjust the size of your logo */
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color: #333; /* or any color you prefer */
+}
+
+.contact-info a {
+    color: #ffa500; /* or any color you prefer */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+}
+
+.text-content {
+    flex-basis: 50%;
+}
+
+.get-started-button, .learn-more-button {
+    background-color: #CC7841;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block; /* Added to allow padding and width adjustments */
+    text-decoration: none; /* Remove underline from anchor tags */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+.get-started-button, .learn-more-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.find-out-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBE6D7;
+    padding-bottom: 20px;
+}
+
+.image-content {
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+/* SUBJECT CONTAINERS  */
+.wrapper{
+    margin-top: 0px;
+    text-align: center;
+    background-color: #FBE6D7; /* Your chosen background color */
+}
+
+.content{
+    width: auto;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+.content .post{
+    background-color: white;
+    border:#C0773B;
+    border-style: solid;
+    border-width: 2px;
+    width: 332px;
+    margin: 10px;
+    padding: 20px 10px;
+}
+
+.content .post .post_img{
+    width: 332px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+}
+
+.content .post .post_img img{
+    width: 50%;
+    height: 50%;
+}
+
+.subjects-container-header{
+    background-color: #FBE6D7; /* Your chosen background color */
+    text-align: center; /* Centers the heading text */
+    padding: 20px 30px 5px 30px;
+}
+
+.About-me{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15%;
+}
+
+.About-me p{
+    text-align: justify;
+}
+
+.About-me h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.testimonials{
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    overflow: hidden; /* Hide the overflowing testimonials */
+    padding: 10px 20px;
+}
+
+.testimonials-wrapper{
+    margin-top: 0px;
+    text-align: center;
+    background-color: #FBE6D7; /* Your chosen background color */
+}
+
+.testimonials-wrapper h2{
+    padding-top: 40px;
+}
+
+.Testimonial-container{
+    flex: 0 0 33.333%; /* Do not grow, do not shrink, base width of a third */
+    width: 33.333%; /* Each container should be a third of the parent width */
+    margin: 0; /* No margin for the individual containers */
+    padding: 20px 40px;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.quote-image{
+    width:50px;
+}
+
+/* CONTACT FORM */
+
+.contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 40px; /* Adjust the padding to your preference */
+
+  }
+  
+  .left-column, .right-column {
+    flex: 1; /* Both columns will take up equal space */
+    padding: 10px; /* Add some spacing around the content */
+  }
+  
+  /* Styling for form elements */
+  .form-group {
+    margin-bottom: 10px; /* Space between form groups */
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px; /* Space between columns */
+  }
+  
+  .col {
+    flex: 1; /* Flex item takes up equal space */
+  }
+  
+  .form-control {
+    width: 100%; /* Make form control take up 100% of its parent container */
+    padding: 15px; /* Larger padding for larger touch area */
+    font-size: 1rem; /* Larger font size for better readability */
+    margin-bottom: 10px; /* Space between inputs */
+    border-radius: 5px; /* Rounded borders */
+    border: 1px solid #ccc; /* Border style */
+  }
+  
+  /* If you want the left column to not be too wide on larger screens */
+  @media (min-width: 992px) {
+    .left-column {
+      max-width: 50%;
+    }
+  }
+  
+  /* Make sure the form stacks on smaller screens for better readability */
+  @media (max-width: 768px) {
+    .contact {
+      flex-direction: column;
+    }
+    .left-column, .right-column {
+      max-width: 100%;
+    }
+  }
+
+  /* FOOTER */
+
+  .footer{
+    background-color:#CC7841; 
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer p, a{
+    color:#ffffff;
+    text-decoration: none
+  }
