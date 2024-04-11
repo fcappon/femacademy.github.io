@@ -1,5 +1,5 @@
 
-/* Basic Reset */
+/* BASIC RESET */
 * {
     margin: 0;
     padding: 0;
@@ -13,58 +13,14 @@ body {
 h1 h2 h3 {
     font-family: "expressway";
     padding-bottom: 40px;
-
 }
 
-/* Top Navigation Bar */
-.top-nav {
-    width: 100%;
-    background-color: #ffffff; /* or any background color you prefer */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
+p {
+    font-size: 20px;
 }
+/* BUTTON STYLE */
 
-.nav-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #E4CDBD; /* Soft line under the header */
-}
-
-.logo {
-    max-height: 50px; /* Adjust the size of your logo */
-    margin-bottom: 10px;
-}
-
-.contact-info {
-    font-size: 0.9em;
-    color: #333; /* or any color you prefer */
-}
-
-.contact-info a {
-    color: #ffa500; /* or any color you prefer */
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.welcome-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 40px;
-}
-
-.text-content {
-    flex-basis: 50%;
-}
-
-.get-started-button, .learn-more-button {
+.get-started-button {
     background-color: #CC7841;
     color: white;
     border: none;
@@ -76,9 +32,74 @@ h1 h2 h3 {
     text-decoration: none; /* Remove underline from anchor tags */
     margin-top: 20px; /* Adjust the margin as needed */
 }
-.get-started-button, .learn-more-button a {
+.get-started-button a {
     text-decoration: none;
     color: white;
+}
+
+.go-back {
+    background-color: #CC7841;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block; /* Added to allow padding and width adjustments */
+    text-decoration: none; /* Remove underline from anchor tags */
+    margin-top: 20px; /* Adjust the margin as needed */
+    margin-left: 1%;
+}
+.go-back a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* TOP NAVIGATION BAR */
+.top-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #ffffff; /* or any background color you prefer */
+    padding: 10px 0px;
+    border-bottom: 2px solid #E4CDBD; /* Soft line under the header */
+    margin: 0px 20px;
+}
+
+.logo {
+    max-height: 50px; /* Adjust the size of your logo */
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color: #333; 
+    padding-right: 20px;
+    margin: auto 0px;
+}
+
+.contact-info a {
+    color: #C0773B;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 40px; /* Adjust the padding to your preference */
+}
+
+.tutor-image {
+    width: 100%;
 }
 
 .find-out-more{
@@ -87,13 +108,6 @@ h1 h2 h3 {
     align-items: center;
     background-color: #FBE6D7;
     padding-bottom: 20px;
-}
-
-.image-content {
-    flex-basis: 50%;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
 }
 
 .image-content img {
@@ -110,7 +124,6 @@ h1 h2 h3 {
 }
 
 .content{
-    width: auto;
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
@@ -146,15 +159,18 @@ h1 h2 h3 {
     padding: 20px 30px 5px 30px;
 }
 
+
+/* ABOUT ME SECTION */
+
 .About-me{
     display: block;
     justify-content: center;
     align-items: center;
-    padding: 30px 15%;
+    padding: 20px 15%;
 }
 
 .About-me p{
-    text-align: justify;
+    text-align: center;
 }
 
 .About-me h2{
@@ -162,34 +178,104 @@ h1 h2 h3 {
     padding-bottom: 10px;
 }
 
-.testimonials{
-    display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    flex-wrap: nowrap; /* Prevent wrapping of items */
-    overflow: hidden; /* Hide the overflowing testimonials */
-    padding: 10px 20px;
-}
+/* TESTIMONIAL CONTAINER */
 
-.testimonials-wrapper{
-    margin-top: 0px;
+.testimonial-header {
     text-align: center;
-    background-color: #FBE6D7; /* Your chosen background color */
+    background-color: #FBE6D7;
+    padding-top:20px;
 }
 
-.testimonials-wrapper h2{
-    padding-top: 40px;
-}
-
-.Testimonial-container{
-    flex: 0 0 33.333%; /* Do not grow, do not shrink, base width of a third */
-    width: 33.333%; /* Each container should be a third of the parent width */
-    margin: 0; /* No margin for the individual containers */
-    padding: 20px 40px;
-    box-sizing: border-box; /* Include padding and border in the element's width */
+.testimonial-text {
+    letter-spacing: 1px;
 }
 
 .quote-image{
     width:50px;
+}
+
+ /* Slideshow container */
+ .slideshow-container {
+    position: relative;
+    background-color: #FBE6D7;
+    padding-bottom: 20px;
+    height:fit-content;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  .Name {
+    font-style:italic;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #CC7841;
+  }
+
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #CC7841;
+  }
+
+  .dot-container{
+    background-color: #FBE6D7;
+    text-align: center;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.Testimonial-container{
+    width: 80%; /* Each container should be a 80 % parent width */
+    padding: 20px 40px;
+    margin: auto;
+    text-align: center;
 }
 
 /* CONTACT FORM */
@@ -199,12 +285,15 @@ h1 h2 h3 {
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px 40px; /* Adjust the padding to your preference */
+  }
 
+  .contact p{
+    padding-right: 20px;
   }
   
   .left-column, .right-column {
     flex: 1; /* Both columns will take up equal space */
-    padding: 10px; /* Add some spacing around the content */
+    padding-bottom: 20px;
   }
   
   /* Styling for form elements */
@@ -244,6 +333,10 @@ h1 h2 h3 {
     }
     .left-column, .right-column {
       max-width: 100%;
+    }
+
+    .welcome-section {
+        flex-direction: column;
     }
   }
 

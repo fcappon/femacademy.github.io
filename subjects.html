@@ -12,29 +12,84 @@
 <body>
     <header>
         <nav class="top-nav">
-            <div class="nav-container">
-                <img src="/Images/ShortLogo.png" alt="Fem Academy Logo" class="logo">
-                <div class="contact-info">
-                    Contact us - <a href="mailto:hello@femacademy.com">hello@femacademy.com</a>
-                </div>
-            </div>
+            <img src="/Images/ShortLogo.png" alt="Fem Academy Logo" class="logo">
+            <div class="contact-info">
+                Contact us - <a href="mailto:hello@femacademy.com">hello@femacademy.com</a>
+            </div>       
         </nav>
     </header>
 
-    <div class="additional-info">
-        <p><b>A-Level Physics</b>: Dive into advanced concepts and theories, preparing for exams with in-depth knowledge and critical thinking skills. <br><br></p>
-        <p><b>GCSE Physics</b>: Build a strong foundation in physics principles, fostering an understanding that will benefit all further scientific studies.</p>
+    <button class="go-back"><a href="./index.html">Go Back</a></button>
+
+    <div class="About-me">
+        <h2>About the lessons</h2>
+        <p>I'm very passionate about science and engineering, and I promise you, I won't convince you that they're the best subjects in the world. But my enthusiasm may create a spark, figuratively - not the hot, red incandescent particles created by low thermal conductive metals like titanium and zirconium. I've been tutoring and teaching mathematics and physics since 2014. My previous students described me as an enthusiastic tutor whose specialty is teaching the fundamentals of problem-solving, the most valuable skill of a physics and math student.</p><br><br>  <p>My tutoring philosophy centres around mastery of the subject rather than just scraping by to pass exams. It's about laying a solid foundation upon which you can build a robust understanding and appreciation for mathematics, physics and programming. My Certificate as an Associate Fellowship in Higher Engineering underscores my ability to apply research backed teaching methods in my tutoring session. This unique approach is what sets me apart, ensuring that my students are not only prepared for university but are ahead of the curve.</p>
     </div>
     
-    <div class="additional-info">
-        <p><b>A-Level Mathematics</b>: Challenge and refine your mathematical abilities, mastering complex topics and problem-solving techniques. <br><br></p>
-        <p><b>GCSE Mathematics</b>: Gain comprehensive knowledge and practical skills necessary for excelling in GCSE Mathematics.</p>
-    </div>
+    <div class="wrapper">
+        <div class="content">
+            <!----Physics----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconPhysics.png" alt="Physics" class="subject-icon">
+                </div>                
+                <h3>Physics</h3>
+                <p><b>A-Level Physics</b>: Dive into advanced concepts and theories, preparing for exams with in-depth knowledge and critical thinking skills. <br><br></p>
+                <p><b>GCSE Physics</b>: Build a strong foundation in physics principles, fostering an understanding that will benefit all further scientific studies.</p>
+            </div>
     
-    <div class="additional-info">
-        <p><b>MATLAB Programming</b>: Expand your skillset with MATLAB, an invaluable tool for various scientific and mathematical applications, enhancing your understanding of both physics and mathematics. <br><br></p>
-        <p><b>Python Programming</b>: Learn the basics of programming in the versatile language.</p>
+            <!----Maths----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconMath.png" alt="Mathematics" class="subject-icon">
+                </div>                
+                <h3>Mathematics</h3>
+                <p><b>A-Level Mathematics</b>: Challenge and refine your mathematical abilities, mastering complex topics and problem-solving techniques. <br><br></p>
+                <p><b>GCSE Mathematics</b>: Gain comprehensive knowledge and practical skills necessary for excelling in GCSE Mathematics.</p>
+            </div>
+
+            <!----Programming----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconProgram.png" alt="Programming" class="subject-icon">
+                </div>                
+                <h3>Programming</h3>
+                <p><b>MATLAB Programming</b>: Expand your skillset with MATLAB, an invaluable tool for various scientific and mathematical applications, enhancing your understanding of both physics and mathematics. <br><br></p>
+                <p><b>Python Programming</b>: Learn the basics of programming in the versatile language.</p>        
+            </div>            
+        </div>
     </div>
+
+
+          
+
+
+
+        <div class="contact">
+            <div class="left-column">
+                <h2>Ready to Transform Your Learning Experience?</h2>
+                <p>Connect with Fem Academy today and unlock a personalized learning journey tailored just for you. Whether you're preparing for exams, looking to deepen your understanding, or eager to explore new areas, I'm here to guide and support you every step of the way.</p>
+            </div>   
+            <div class="right-column" id="contact-form"> 
+                <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="col">
+                          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+                      <input type="checkbox" name="newsletter"><label for="newsletter"> I would like to subscribe to the monthly newsletter and stay up to date about any upcoming courses and worskhops.</label>
+                    </div>
+                    <button type="submit" class="get-started-button">Submit Form</button>
+                  </form>
+            </div>    
+        </div>
 
 </body>
 <footer class="footer">

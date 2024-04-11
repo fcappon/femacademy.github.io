@@ -1,0 +1,51 @@
+
+
+    
+    <div class="welcome-section">
+        <div class="left-column">
+            <h1>We Support Your Learning</h1>
+            <p>Here at Fem Academy, we believe that every student has the potential to excel in science. Our personalized tutoring approach is tailored to fit your unique learning style, pace, and goals. Whether you're grappling with complex theories or seeking to sharpen your problem-solving skills, our expert guidance will transform the way you learn and perceive these subjects. Join us, and embark on a path to academic success and newfound confidence in Physics and Mathematics.</p>
+            <button type="button"class="get-started-button" onclick="smoothScroll(document.getElementById('contact-form'))">Get Started</button>
+        </div>
+        <div class="right-column">
+            <img src="Images/LeaderImage.png" alt="Online Tutoring From the Comfort of your Home Physics, Maths and Programming All Levels" class="tutor-image">
+        </div>
+    </div>
+
+        <div class="subjects-container-header">
+        <h2>We focus on nurturing and developing skills in the following areas</h2>
+    </div>
+   <div class="wrapper">
+        <div class="content">
+            <!----Physics----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconPhysics.png" alt="Physics" class="subject-icon">
+                </div>                
+                <h3>Physics</h3>
+                <span>GCSE and A-Level</span>
+            </div>
+    
+            <!----Maths----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconMath.png" alt="Mathematics" class="subject-icon">
+                </div>                
+                <h3>Mathematics</h3>
+                <span>GCSE and A-Level</span>
+            </div>
+
+            <!----Programming----->
+            <div class="post">
+                <div class="post_img">
+                    <img src="Images/IconProgram.png" alt="Programming" class="subject-icon">
+                </div>                
+                <h3>Programming</h3>
+                <span>Python and MATLAB</span>
+            </div>            
+</div>
+        <div class="find-out-more">
+            <button class="get-started-button"><a href="./subjects.html">Find out More</a></button>
+        </div>
+
+</div>
