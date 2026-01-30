@@ -1,180 +1,836 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fem Academy - Unlock Your Academic Potential</title>
-    <link rel="stylesheet" href="style.css">   
-    <link rel="stylesheet" href="https://use.typekit.net/mst2wge.css">  
-    <link rel="stylesheet" href="https://use.typekit.net/pql0kng.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QY82QXDP1E"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QY82QXDP1E');
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tutoring in Maths, Physics, and Programming. Online lessons with clear structure." />
+  <title>Femke — Maths, Physics & Programming Tutor</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Images/ShortLogo.png">
+  <link rel="apple-touch-icon" href="./Images/ShortLogo.png">
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-        <nav class="top-nav">
-            <img src="/Images/ShortLogo.png" alt="Fem Academy Logo" class="logo">
-            <div class="contact-info">
-                Contact us - <a href="mailto:fem-academy@outlook.com">fem-academy@outlook.com</a>
-            </div>       
-        </nav>
-    </header>
+  <!-- RESPONSIVE NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#main">
+        <img
+          src="./Images/ShortLogo.png"
+          alt="Femacademy logo"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+          loading="lazy"
+        />
+        <span class="brand-name">Femacademy</span>
+      </a>
 
-    <div class="welcome-section">
-        <div class="left-column">
-            <h1>We Support Your Learning</h1>
-            <p>Here at Fem Academy, we believe that every student has the potential to excel in science. Our personalised tutoring approach is tailored to fit your unique learning style, pace, and goals. Whether you're grappling with complex theories or seeking to sharpen your problem-solving skills, our expert guidance will transform the way you learn and perceive these subjects. Join us, and embark on a path to academic success and newfound confidence in Physics, Mathemaics and Programming.</p>
-            <button type="button"class="get-started-button" onclick="smoothScroll(document.getElementById('contact-form'))">Get Started</button>
-        </div>
-        <div class="right-column">
-            <img src="Images/LeaderImage.png" alt="Online Tutoring From the Comfort of your Home Physics, Maths and Programming All Levels" class="tutor-image">
-        </div>
+      <!-- Hamburger toggle button for mobile -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#who-i-help">Who I help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-it-works">How it works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lessons-and-fees">Lessons and fees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a href="#contact" class="btn btn-outline-primary btn-sm">
+              Get in touch
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="subjects-container-header">
-        <h2>We focus on nurturing and developing skills in the following areas</h2>
+  <!-- Dark Mode Toggle -->
+  <div class="container-fluid">
+    <div class="d-flex justify-content-end align-items-center py-2 px-3">
+      <span class="me-2 text-muted small">Use the switch to toggle between light and dark mode</span>
+      <button id="darkModeToggle" class="toggle-switch" aria-label="Toggle dark mode">
+        <span class="toggle-slider"></span>
+      </button>
     </div>
+  </div>
 
-    <div class="wrapper">
-        <div class="content">
-            <!----Physics----->
-            <div class="post">
-                <div class="post_img">
-                    <img src="Images/IconPhysics.png" alt="Physics" class="subject-icon">
-                </div>                
-                <h3>Physics</h3>
-                <span>GCSE and A-Level</span>
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <!-- Image -->
+        <div class="col-10 col-sm-8 col-lg-6 mx-auto">
+          <img
+            src="./Images/hero-paperbackground.png"
+            class="d-block mx-lg-auto img-fluid rounded"
+            alt="Online tutoring in Maths, Physics and Programming"
+            width="800"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-2">
+            1-to-1 online Maths and Physics tutoring
+          </h1>
+          <p class="fs-5 mb-3">
+            Maths & Physics | GCSE • A-Level • University 
+          </p>
+
+          <p class="lead mb-4">
+            Step-by-step teaching focused on problem solving and exam technique. I explain the why, then we practise until it feels familiar.
+          </p>
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="#contact" class="btn btn-brand btn-lg px-4">
+              Get in touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / WHY CHOOSE -->
+    <section class="container px-4 py-5 features-section">
+      <h2 class="section-heading">What you can expect</h2>
+      <p class="section-subheading text-muted">A few things parents and students ask about most.</p>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 py-4 justify-content-lg-center">
+        <div class="col d-flex align-items-start">
+          <div class="icon-placeholder flex-shrink-0 me-3" style="font-size: 1.75em;">🎓</div>
+          <div>
+            <h4 class="fw-bold mb-0">PhD & AFHEA</h4>
+            <p>Maths and Physics (GCSE to university)</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-placeholder flex-shrink-0 me-3" style="font-size: 1.75em;">⭐</div>
+          <div>
+            <h4 class="fw-bold mb-0">5.0 rating</h4>
+            <p>and more than 20 repeated students</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-placeholder flex-shrink-0 me-3" style="font-size: 1.75em;">🧠</div>
+          <div>
+            <h4 class="fw-bold mb-0">Strong foundations</h4>
+            <p>Step-by-step problem solving that builds real understanding</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-placeholder flex-shrink-0 me-3" style="font-size: 1.75em;">📚</div>
+          <div>
+            <h4 class="fw-bold mb-0">Exam boards covered</h4>
+            <p>AQA, Edexcel and OCR (tailored to your course)</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-placeholder flex-shrink-0 me-3" style="font-size: 1.75em;">💬</div>
+          <div>
+            <h4 class="fw-bold mb-0">Free consultation</h4>
+            <p>Message first, then we book a free intro video call</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO I HELP -->
+    <section id="who-i-help" class="container px-4 py-5">
+      <h2 class="section-heading">Who I help</h2>
+      <p class="section-subheading text-muted">Focused support for GCSE, A-Level, and university students.</p>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent">
+              <h4 class="fw-bold mb-0">GCSE Maths & Physics</h4>
             </div>
-    
-            <!----Maths----->
-            <div class="post">
-                <div class="post_img">
-                    <img src="Images/IconMath.png" alt="Mathematics" class="subject-icon">
-                </div>                
-                <h3>Mathematics</h3>
-                <span>GCSE and A-Level</span>
+            <div class="card-body">
+              <ul class="checkmark-list mb-3">
+                <li>Build confidence</li>
+                <li>Improve grades</li>
+                <li>Strong foundations</li>
+              </ul>
+              <a href="#contact" class="card-link fw-bold">Ask about GCSE → </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent">
+              <h4 class="fw-bold mb-0">A-Level Maths & Physics</h4>
+            </div>
+            <div class="card-body">
+              <ul class="checkmark-list mb-3">
+                <li>Perfect the fundamentals</li>
+                <li>Harder questions</li>
+                <li>Past-paper practice</li>
+              </ul>
+              <a href="#contact" class="card-link fw-bold">Ask about A-Level → </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent">
+              <h4 class="fw-bold mb-0">University support  </h4>
+            </div>
+            <div class="card-body">
+              <ul class="checkmark-list mb-3">
+                <li>Foundations refresh</li>
+                <li>Problem sets</li>
+                <li>MATLAB support</li>
+              </ul>
+              <a href="#contact" class="card-link fw-bold">Ask about university → </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS / TESTIMONIALS -->
+    <section id="reviews" class="container px-4 py-5">
+      <h2 class="section-heading">What parents and students say</h2>
+      <p class="section-subheading text-muted">Reviews from families we've worked with.</p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <img src="./Images/tutorful-icon.png" alt="Tutorful" title="Tutorful" height="24">
+            </div>
+            <div class="card-body">
+              <p class="card-text review-text">"Femke was brilliant with my daughter offering her a session that perfectly met her needs for her college course. Her teacher was clear and well explained, she was also personable and engaging. I would whole heartily recommend."</p>
+              <p class="card-text"><strong>— Clara</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <img src="./Images/tutorful-icon.png" alt="Tutorful" title="Tutorful" height="24">
+            </div>
+            <div class="card-body">
+              <p class="card-text review-text">"Fem is great - helped Jonny with A'Level Physics and Maths, helping him from Bs to strong As. She explains well, calm mannered, and recommended!"</p>
+              <p class="card-text"><strong>— Simon</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <img src="./Images/tutorful-icon.png" alt="Tutorful" title="Tutorful" height="24">
+            </div>
+            <div class="card-body">
+              <p class="card-text review-text">"Since we have started the lessons our daughters school grades improved dramatically. Femke always applies the up to date study materials, she uses interactive online platforms to deliver the lessons."</p>
+              <p class="card-text"><strong>— Jenia</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <img src="./Images/tutorful-icon.png" alt="Tutorful" title="Tutorful" height="24">
+            </div>
+            <div class="card-body">
+              <p class="card-text review-text">"We are so happy that Femke is sharing our point of view to invoke an interest to the subjects rather than only focusing on the exam grades."</p>
+              <p class="card-text"><strong>— Chris</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <img src="./Images/tutorful-icon.png" alt="Tutorful" title="Tutorful" height="24">
+            </div>
+            <div class="card-body">
+              <p class="card-text review-text">"I received my mark back for the coding assignment and got 80% which, considering where I was with MATLAB I am very pleased. Thanks again for all of your help!"</p>
+              <p class="card-text"><strong>— Iwan</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-light h-100">
+            <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <img src="./Images/tutorful-icon.png" alt="Tutorful" title="Tutorful" height="24">
+            </div>
+            <div class="card-body">
+              <p class="card-text review-text">"Femke is a good mentor, who takes the time and effort to support other students. She has the ability to explain complex information in simple terms for everyone to understand. She is able to guide students on a subject and provides recommendations on where to find information for further reading and understanding. She has the patience to go over work with others if they do no understand the subject area and is confident in her area of expertise."</p>
+              <p class="card-text"><strong>— Angel</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="container px-4 py-5">
+      <h2 class="section-heading">How it works</h2>
+      <p class="section-subheading text-muted">Three simple steps, from first message to weekly lessons.</p>
+
+      <div class="row g-4 py-4 steps-container">
+        <div class="col-12 col-md-4 step-column">
+          <div class="step-content text-center">
+            <div class="step-number-circle mb-3">1</div>
+            <h4 class="fw-bold mb-2">Send an enquiry</h4>
+            <p class="mb-0">Share the subject, level, and your goal.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 step-column">
+          <div class="step-content text-center">
+            <div class="step-number-circle mb-3">2</div>
+            <h4 class="fw-bold mb-2">Free intro call</h4>
+            <p class="mb-0">We agree goals, approach, and a plan for lessons.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 step-column">
+          <div class="step-content text-center">
+            <div class="step-number-circle mb-3">3</div>
+            <h4 class="fw-bold mb-2">Start lessons</h4>
+            <p class="mb-0">Weekly sessions with practice and clear next steps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="#contact" class="btn btn-brand btn-lg px-4 mb-2">Send an enquiry</a>
+        <p class="text-muted small mb-0">Send a quick message. I will reply within 2 working days.</p>
+      </div>
+    </section>
+
+    <!-- LESSONS AND FEES -->
+    <section id="lessons-and-fees" class="container px-4 pricing-section">
+      <h2 class="section-heading">Lessons and fees</h2>
+      <p class="section-subheading text-muted">Online 1-to-1 tutoring with clear pricing and no commitment.</p>
+
+      <!-- Pricing Cards -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 pricing-cards-row">
+        <div class="col">
+          <div class="card border-light h-100 pricing-card">
+            <div class="card-body">
+              <h4 class="fw-bold mb-3">GCSE</h4>
+              <div class="price-display mb-2">
+                <span class="price-amount">£50</span>
+                <span class="price-period">/ hour</span>
+              </div>
+              <p class="pay-as-you-go text-muted small mb-3">Pay as you go</p>
+              <ul class="checkmark-list mb-0">
+                <li>1-to-1 lesson (Teams)</li>
+                <li>Shared notes (OneNote)</li>
+                <li>Optional homework</li>
+                <li>Email questions between lessons</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card border-light h-100 pricing-card">
+            <div class="card-body">
+              <h4 class="fw-bold mb-3">A-Level</h4>
+              <div class="price-display mb-2">
+                <span class="price-amount">£70</span>
+                <span class="price-period">/ hour</span>
+              </div>
+              <p class="pay-as-you-go text-muted small mb-3">Pay as you go</p>
+              <ul class="checkmark-list mb-0">
+                <li>1-to-1 lesson (Teams)</li>
+                <li>Shared notes (OneNote)</li>
+                <li>Optional homework</li>
+                <li>Email questions between lessons</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card border-light h-100 pricing-card">
+            <div class="card-body">
+              <h4 class="fw-bold mb-3">University</h4>
+              <div class="price-display mb-2">
+                <span class="price-amount">£80</span>
+                <span class="price-period">/ hour</span>
+              </div>
+              <p class="pay-as-you-go text-muted small mb-3">Pay as you go</p>
+              <ul class="checkmark-list mb-0">
+                <li>1-to-1 lesson (Teams)</li>
+                <li>Shared notes (OneNote)</li>
+                <li>Optional homework</li>
+                <li>Email questions between lessons</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What's Included Feature Strip -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 features-strip">
+        <div class="col">
+          <div class="feature-item text-center">
+            <div class="feature-icon mb-2">💻</div>
+            <h5 class="fw-bold mb-1">Teams lesson</h5>
+            <p class="small mb-0">1-to-1 on Microsoft Teams</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-item text-center">
+            <div class="feature-icon mb-2">📝</div>
+            <h5 class="fw-bold mb-1">Shared notes</h5>
+            <p class="small mb-0">Pdf notes after each session</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-item text-center">
+            <div class="feature-icon mb-2">✏️</div>
+            <h5 class="fw-bold mb-1">Interactive whiteboard</h5>
+            <p class="small mb-0">Excalidraw when student input helps</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-item text-center">
+            <div class="feature-icon mb-2">💬</div>
+            <h5 class="fw-bold mb-1">Support between lessons</h5>
+            <p class="small mb-0">Email questions between lessons</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Policy -->
+      <div class="payment-policy">
+        <h5 class="fw-bold mb-2">Payment and booking</h5>
+        <p class="text-muted mb-0">Payment is due 24 hours before the lesson. This confirms the session. Pay as you go, with no commitment.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center pricing-cta">
+        <a href="#contact" class="btn btn-brand btn-lg px-4">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container px-4 py-5">
+      <h2 class="section-heading">Frequently asked questions</h2>
+      <p class="section-subheading text-muted">Common questions from parents and students.</p>
+
+      <div class="accordion mb-3" id="faqAccordion">
+        <!-- Initially visible FAQs (8) -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+              How do online lessons work?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We meet on Microsoft Teams for a 1-to-1 lesson. We use OneNote for shared notes, which you can access after the session. If you need to write and solve questions live, we can use a shared whiteboard (Excalidraw).
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              What is your payment policy?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Payment is due 24 hours before the session. Payment also confirms the lesson.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              What happens if a payment is late?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              If payment has not come through 24 hours before the session, the lesson will not go ahead. I will cancel the session and send an email to confirm the cancellation.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              Can we reschedule a lesson?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes. Send me a message as soon as you can and suggest a few alternative times. I'll do my best to find a new slot.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+              How do we get started?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Send a message with the subject, level, and what you want to improve. We can then book a free intro video call and agree the best next steps.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+              Why should I choose you as a tutor?
+            </button>
+          </h2>
+          <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              I am DBS checked and I have over 10 years of experience tutoring Maths and Physics. I have also taught at university level, and I hold an Associate Fellowship of the Higher Education Academy (AFHEA). This background helps me plan lessons well and support students with clear steps and strong foundations.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+              Do you cover my exam board?
+            </button>
+          </h2>
+          <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes. I cover the main UK exam boards, including AQA, Edexcel, and OCR. If you have a topic list or course outline, share it and I will tailor lessons to it.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+              Can you guarantee a grade?
+            </button>
+          </h2>
+          <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              No tutor can guarantee a grade. What I can do is teach clearly, focus on problem solving and exam technique, and help you make steady progress with regular practice.
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden FAQs (4) -->
+        <div id="additionalFaqs" class="d-none">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                What do I need for a lesson?
+              </button>
+            </h2>
+            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                You need a device that can run Microsoft Teams, a stable internet connection, and somewhere quiet to work. A notebook and pen can help, but they are not required.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                How long are lessons?
+              </button>
+            </h2>
+            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <p class="mb-2">It depends on the level and subject.</p>
+                <p class="mb-2"><strong>GCSE:</strong> I recommend 60 minutes.</p>
+                <p class="mb-2"><strong>A-Level Maths:</strong> 60 minutes is often enough.</p>
+                <p class="mb-2"><strong>A-Level Physics:</strong> I often recommend 90 minutes, depending on your current grade and confidence, as it gives time for explanations and questions.</p>
+                <p class="mb-0"><strong>University:</strong> We'll discuss the best length in a free intro video call.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11">
+                Do you set homework?
+              </button>
+            </h2>
+            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, if you want it. I can send optional homework after the lesson. You can also email me questions between sessions.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">
+                Can I email questions between lessons?
+              </button>
+            </h2>
+            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. You can email me questions between lessons, and I will reply when I can. If a topic needs more time, we can cover it in the next session.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggle Button -->
+      <div class="text-center mb-4">
+        <button id="toggleFaqs" class="btn btn-link text-decoration-none fw-bold" style="color: var(--accent);">
+          See all FAQs ↓
+        </button>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <a href="#contact" class="btn btn-brand btn-lg px-4 mb-2">Get in touch</a>
+        <p class="text-muted small mb-0">Send the subject, level, and your goal.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="container px-4 py-5">
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold mb-3">Get in touch</h1>
+        <p class="lead mb-2">Send a message and I'll reply within 2 working days.</p>
+        <p class="text-muted small mb-0">After your message, we can book a free intro call.</p>
+      </div>
+
+      <div class="row g-5">
+        <!-- Left Column: Contact Form -->
+        <div class="col-lg-7">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="a1150ef9-fbaa-4e6b-80aa-eb55355c8654">
+            <input type="hidden" name="redirect" value="https://femacademy.github.io/test.html#contact">
+            <input type="hidden" name="subject" value="New Tutoring Enquiry from Website">
+
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="name" name="name" required>
             </div>
 
-            <!----Programming----->
-            <div class="post">
-                <div class="post_img">
-                    <img src="Images/IconProgram.png" alt="Programming" class="subject-icon">
-                </div>                
-                <h3>Programming</h3>
-                <span>Python and MATLAB</span>
-            </div>            
-        </div>
-        <div class="find-out-more">
-            <button class="get-started-button"><a href="./subjects.html">Find out More</a></button>
-        </div>
-    </div>       
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
 
-    <div class="About-me">
-        <h2>About me</h2>
-        <p>At Fem Academy, I, Femke, am deeply committed to making learning an interactive, engaging, and insightful journey. With an academic background rich in Engineering Physics, Biomedical Engineering, and Electronics and a PhD, I bring a wealth of knowledge and a unique perspective to the table. My experience as an associate fellow in higher education and current role lecturing engineering mathematics and MATLAB programming at university has given me the ability to communicate complex concepts in a clear, understandable manner.</p>
-    </div>
+            <div class="mb-3">
+              <label for="studentLevel" class="form-label fw-bold">Student level <span class="text-danger">*</span></label>
+              <select class="form-select" id="studentLevel" name="studentLevel" required>
+                <option value="">Choose...</option>
+                <option value="GCSE">GCSE</option>
+                <option value="A-Level">A-Level</option>
+                <option value="University">University</option>
+                <option value="Not sure">Not sure</option>
+              </select>
+            </div>
 
-    <div class="testimonial-header">
-        <h2>Testimonials</h2>
-        <p class="testimonial-text" >Don't take our word for it. <br> Take theirs . . .</p>
-        <br>
-        <img src="Images/openquote.png" class="quote-image">
-        <br>
-    </div>
-
-    <!-- Slideshow container -->
-<div class="slideshow-container">
-    <!-- Testimonials -->
-     <div class="mySlides fade">
-       <div class="Testimonial-container">
-         <p>“Femke was brilliant with my daughter offering her a session that perfectly met her needs for her college course. Her teacher was clear and well explained, she was also personable and engaging. I would whole heartily recommend.”</p>    
-         <p class="Name">Clara</p>
-     </div>
-     </div>
-   
-     <div class="mySlides fade">
-       <div class="Testimonial-container">
-         <p>“Fem is great - helped Jonny with A'Level Physics and Maths, helping him from Bs to strong As. She explains well, calm mannered, and recommended!”</p>    
-         <p class="Name">Simon</p>
-     </div>
-     </div>
-   
-     <div class="mySlides fade">
-       <div class="Testimonial-container">
-         <p>“Since we have started the lessons our daughters school grades improved dramatically. Femke always applies the up to date study materials, she uses interactive online platforms to deliver the lessons.”</p>    
-         <p class="Name">Jenia</p>
-     </div>
-     </div>
- 
-     <div class="mySlides fade">  
-         <div class="Testimonial-container">
-             <p>“We are so happy that Femke is sharing our point of view to invoke an interest to the subjects rather than only focusing on the exam grades.”</p>    
-             <p class="Name">Chris</p>
-       </div>
-       </div>
- 
-       <div class="mySlides fade">
-         <div class="Testimonial-container">
-             <p>“I received my mark back for the coding assignment and got 80% which, considering where I was with MATLAB I am very pleased. Thanks again for all of your help!”</p>    
-             <p class="Name">Iwan</p>
-       </div>
-       </div>
-   
-     <!-- Next and previous buttons -->
-     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-     <a class="next" onclick="plusSlides(1)">&#10095;</a>
- 
-     <div class="dot-container">
-         <span class="dot" onclick="currentSlide(1)"></span>
-         <span class="dot" onclick="currentSlide(2)"></span>
-         <span class="dot" onclick="currentSlide(3)"></span>
-         <span class="dot" onclick="currentSlide(4)"></span>
-         <span class="dot" onclick="currentSlide(5)"></span>
-       </div>
-     
- </div>
-
- <div class="contact">
-    <div class="left-column">
-        <h2>Ready to Transform Your Learning Experience?</h2>
-        <p>Connect with Fem Academy today and unlock a personalized learning journey tailored just for you. Whether you're preparing for exams, looking to deepen your understanding, or eager to explore new areas, I'm here to guide and support you every step of the way.</p>
-    </div>   
-    <div class="right-column" id="contact-form"> 
-        <form target="_blank" action="https://formsubmit.co/f.cappon@fem-academy.com" method="POST">
-            <input type="hidden" name="_next" value="https://fem-academy.com/thanks">           
-            <input type="hidden" name="_captcha" value="false">
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col">
-                  <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Subject <span class="text-danger">*</span></label>
+              <p class="text-muted small mb-2">Tick all that apply</p>
+              <div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Maths" id="subjectMaths" name="subject">
+                  <label class="form-check-label" for="subjectMaths">Maths</label>
                 </div>
-                <div class="col">
-                  <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Physics" id="subjectPhysics" name="subject">
+                  <label class="form-check-label" for="subjectPhysics">Physics</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="MATLAB support" id="subjectMatlab" name="subject">
+                  <label class="form-check-label" for="subjectMatlab">MATLAB support</label>
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <textarea placeholder="If you are interested in our tutoring service, write down your message including the subject and level here and we will be in touch with you within two working days." class="form-control" name="message" rows="10" required></textarea>
-              <input type="checkbox" name="newsletter"><label for="newsletter"> I would like to subscribe to the monthly newsletter and stay up to date about any upcoming courses and worskhops.</label>
+
+            <div class="mb-3">
+              <label for="details" class="form-label fw-bold">Message <span class="text-danger">*</span></label>
+              <textarea class="form-control" id="details" name="details" rows="5" placeholder="Tell me the subject, level, your current grade, and what you want to improve. Add any exam dates or deadlines." required></textarea>
             </div>
-            <button type="submit" class="get-started-button">Submit Form</button>
+
+            <div class="mb-3">
+              <label for="examBoard" class="form-label fw-bold">Exam board <span class="text-muted small">(optional)</span></label>
+              <select class="form-select" id="examBoard" name="examBoard">
+                <option value="">Choose...</option>
+                <option value="AQA">AQA</option>
+                <option value="Edexcel">Edexcel</option>
+                <option value="OCR">OCR</option>
+                <option value="Other / not sure">Other / not sure</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="preferredTimes" class="form-label fw-bold">Preferred days/times <span class="text-muted small">(optional)</span></label>
+              <input type="text" class="form-control" id="preferredTimes" name="preferredTimes" placeholder="e.g. Tue after 5pm, Sat mornings">
+            </div>
+
+            <div class="mb-4">
+              <label for="hearAbout" class="form-label fw-bold">How did you hear about me? <span class="text-muted small">(optional)</span></label>
+              <select class="form-select" id="hearAbout" name="hearAbout">
+                <option value="">Choose...</option>
+                <option value="Tutorful">Tutorful</option>
+                <option value="Google search">Google search</option>
+                <option value="Recommendation">Recommendation</option>
+                <option value="Social media">Social media</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-brand btn-lg px-4">Send message</button>
+            <p class="text-muted small mt-2 mb-0">I reply within 2 working days. Payment is only taken once we book a lesson.</p>
           </form>
-    </div>    
-</div>
+        </div>
 
-<footer class="footer">
-        <p>Contact us at <a href="mailto:fem-academy@outlook.com">fem-academy@outlook.com</a></p>
-</footer>
+        <!-- Right Column: Info Cards -->
+        <div class="col-lg-5">
+          <div class="card border-light mb-3">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">What happens next</h5>
+              <ol class="mb-0 ps-3">
+                <li class="mb-2">I read your message and reply with a few questions if needed.</li>
+                <li class="mb-2">We book a free intro call.</li>
+                <li class="mb-0">If we're a good fit, we schedule lessons.</li>
+              </ol>
+            </div>
+          </div>
 
-    <!--JavaScript -->
-    <script src="/script.js"></script>
+          <div class="card border-light mb-3">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">To help me respond quickly</h5>
+              <ul class="mb-0">
+                <li class="mb-2">Subject and level</li>
+                <li class="mb-2">What you find hardest right now</li>
+                <li class="mb-2">Any exam dates or deadlines</li>
+                <li class="mb-0">Your availability</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card border-light">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">Prefer email?</h5>
+              <p class="mb-1">Email:</p>
+              <p class="mb-0">
+                <a href="mailto:fem-academy@outlook.com" class="text-decoration-none">fem-academy@outlook.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-top">
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Quick Navigation -->
+        <div class="col-md-6 col-lg-3">
+          <h6 class="fw-bold mb-3">Quick navigation</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#who-i-help" class="text-decoration-none text-muted">Who I help</a></li>
+            <li class="mb-2"><a href="#reviews" class="text-decoration-none text-muted">Reviews</a></li>
+            <li class="mb-2"><a href="#how-it-works" class="text-decoration-none text-muted">How it works</a></li>
+            <li class="mb-2"><a href="#lessons-and-fees" class="text-decoration-none text-muted">Lessons and fees</a></li>
+            <li class="mb-2"><a href="#faq" class="text-decoration-none text-muted">FAQ</a></li>
+            <li class="mb-0"><a href="#contact" class="text-decoration-none text-muted">Get in touch</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-6 col-lg-3">
+          <h6 class="fw-bold mb-3">Contact</h6>
+          <p class="text-muted mb-1">Email:</p>
+          <p class="mb-0">
+            <a href="mailto:fem-academy@outlook.com" class="text-decoration-none">fem-academy@outlook.com</a>
+          </p>
+        </div>
+
+        <!-- Trust and Legal -->
+        <div class="col-md-6 col-lg-3">
+          <h6 class="fw-bold mb-3">Trust & reassurance</h6>
+          <p class="text-muted small mb-3">DBS checked • PhD & AFHEA • Online 1-to-1</p>
+
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-muted small">Privacy policy</a></li>
+            <li class="mb-2"><a href="#" class="text-decoration-none text-muted small">Cookie policy</a></li>
+            <li class="mb-0"><a href="#" class="text-decoration-none text-muted small">Terms</a></li>
+          </ul>
+        </div>
+
+        <!-- Copyright and Back to Top -->
+        <div class="col-md-6 col-lg-3">
+          <h6 class="fw-bold mb-3">FemAcademy</h6>
+          <p class="text-muted small mb-2">© <span id="year"></span> FemAcademy</p>
+          <p class="text-muted small mb-3">London, UK</p>
+          <p class="mb-0">
+            <a href="#top" class="text-decoration-none">Back to top ↑</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
 </body>
 </html>

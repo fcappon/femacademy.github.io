@@ -1,52 +1,99 @@
-window.smoothScroll = function(target) {
-    var scrollContainer = target;
-    do { //find scroll container
-        scrollContainer = scrollContainer.parentNode;
-        if (!scrollContainer) return;
-        scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop == 0);
+(function () {
+  // Dark Mode Toggle
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const html = document.documentElement;
 
-    var targetY = 0;
-    do { //find the top of target relatively to the container
-        if (target == scrollContainer) break;
-        targetY += target.offsetTop;
-    } while (target = target.offsetParent);
+  // Detect device theme preference
+  const getDeviceTheme = () => {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
 
-    scroll = function(c, a, b, i) {
-        i++; if (i > 30) return;
-        c.scrollTop = a + (b - a) / 30 * i;
-        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+  // Check for saved theme preference, then device preference, or default to light mode
+  const currentTheme = localStorage.getItem('theme') || getDeviceTheme();
+  html.setAttribute('data-theme', currentTheme);
+
+  // Toggle dark mode
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Review "Read More" functionality
+  const maxChars = 150;
+  const reviewTexts = document.querySelectorAll('.review-text');
+
+  reviewTexts.forEach((reviewEl) => {
+    const fullText = reviewEl.textContent.trim();
+
+    if (fullText.length > maxChars) {
+      const truncatedText = fullText.substring(0, maxChars) + '...';
+
+      // Create elements
+      const truncatedSpan = document.createElement('span');
+      truncatedSpan.className = 'truncated-text';
+      truncatedSpan.textContent = truncatedText;
+
+      const fullSpan = document.createElement('span');
+      fullSpan.className = 'full-text';
+      fullSpan.style.display = 'none';
+      fullSpan.textContent = fullText;
+
+      const readMoreLink = document.createElement('a');
+      readMoreLink.href = '#';
+      readMoreLink.className = 'read-more-link';
+      readMoreLink.textContent = ' Read more';
+
+      // Clear and rebuild content
+      reviewEl.textContent = '';
+      reviewEl.appendChild(truncatedSpan);
+      reviewEl.appendChild(fullSpan);
+      reviewEl.appendChild(readMoreLink);
+
+      // Toggle functionality
+      readMoreLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isExpanded = fullSpan.style.display === 'inline';
+
+        if (isExpanded) {
+          truncatedSpan.style.display = 'inline';
+          fullSpan.style.display = 'none';
+          readMoreLink.textContent = ' Read more';
+        } else {
+          truncatedSpan.style.display = 'none';
+          fullSpan.style.display = 'inline';
+          readMoreLink.textContent = ' Read less';
+        }
+      });
     }
-    // start scrolling
-    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+  });
 
+  // FAQ Toggle functionality
+  const toggleFaqsBtn = document.getElementById('toggleFaqs');
+  const additionalFaqs = document.getElementById('additionalFaqs');
 
-let slideIndex = 1;
-showSlides(slideIndex);
+  if (toggleFaqsBtn && additionalFaqs) {
+    toggleFaqsBtn.addEventListener('click', () => {
+      const isHidden = additionalFaqs.classList.contains('d-none');
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+      if (isHidden) {
+        additionalFaqs.classList.remove('d-none');
+        toggleFaqsBtn.textContent = 'Show fewer FAQs ↑';
+      } else {
+        additionalFaqs.classList.add('d-none');
+        toggleFaqsBtn.textContent = 'See all FAQs ↓';
+      }
+    });
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+
+  // Contact form now handled by Web3Forms
+  // No client-side JavaScript needed for form submission
+})();
