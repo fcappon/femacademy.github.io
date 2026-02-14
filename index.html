@@ -6,6 +6,9 @@
   <meta name="description" content="Tutoring in Maths, Physics, and Programming. Online lessons with clear structure." />
   <title>Femke — Maths, Physics & Programming Tutor</title>
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.fem-academy.com/" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./Images/ShortLogo.png">
   <link rel="apple-touch-icon" href="./Images/ShortLogo.png">
@@ -20,6 +23,13 @@
 
   <!-- Your styles -->
   <link rel="stylesheet" href="./style.css?v=2" />
+
+  <!-- Redirect /index.html to / -->
+  <script>
+    if (window.location.pathname === '/index.html') {
+      window.location.replace('/');
+    }
+  </script>
 </head>
 
 <body>
