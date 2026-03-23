@@ -96,4 +96,59 @@
 
   // Contact form now handled by Web3Forms
   // No client-side JavaScript needed for form submission
+
+  // Cookie Consent Banner
+  const cookieBanner = document.getElementById('cookieConsentBanner');
+  const cookieAcceptBtn = document.getElementById('cookieAccept');
+  const cookieRejectBtn = document.getElementById('cookieReject');
+
+  // Check if user has already made a choice
+  const cookieConsent = localStorage.getItem('cookieConsent');
+
+  if (!cookieConsent && cookieBanner) {
+    // Show banner if no choice has been made
+    cookieBanner.hidden = false;
+  }
+
+  // Handle Accept button
+  if (cookieAcceptBtn) {
+    cookieAcceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieBanner.hidden = true;
+
+      // Load Google Analytics
+      loadGoogleAnalytics();
+    });
+  }
+
+  // Handle Reject button
+  if (cookieRejectBtn) {
+    cookieRejectBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'rejected');
+      cookieBanner.hidden = true;
+    });
+  }
+
+  // Function to dynamically load Google Analytics
+  function loadGoogleAnalytics() {
+    // Check if GA is already loaded
+    if (window.gtag) {
+      return; // Already loaded
+    }
+
+    // Create and inject GA script
+    const gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T764LK08XQ';
+    document.head.appendChild(gaScript);
+
+    // Initialize GA
+    gaScript.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-T764LK08XQ');
+    };
+  }
 })();

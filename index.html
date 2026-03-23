@@ -24,13 +24,22 @@
   <!-- Your styles -->
   <link rel="stylesheet" href="./style.css?v=2" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QY82QXDP1E"></script>
+  <!-- Google Analytics (loaded conditionally based on cookie consent) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QY82QXDP1E');
+    // Check if user has consented to analytics cookies
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (cookieConsent === 'accepted') {
+      // Load Google Analytics
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T764LK08XQ';
+      document.head.appendChild(gaScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T764LK08XQ');
+    }
   </script>
 
   <!-- Redirect /index.html to / -->
@@ -1009,6 +1018,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsentBanner" class="cookie-consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+    <div class="cookie-consent-content">
+      <div class="cookie-consent-text">
+        <p class="mb-2 fw-bold">We use cookies to improve your experience</p>
+        <p class="mb-0 small">
+          We use Google Analytics to understand how visitors use our site. By clicking "Accept", you consent to our use of cookies.
+          <a href="/cookie-policy.html" class="text-decoration-underline">Learn more</a>
+        </p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button id="cookieReject" class="btn btn-outline-secondary btn-sm me-2" aria-label="Reject analytics cookies">
+          Reject
+        </button>
+        <button id="cookieAccept" class="btn btn-brand btn-sm" aria-label="Accept analytics cookies">
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
