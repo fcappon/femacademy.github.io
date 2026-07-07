@@ -1,0 +1,375 @@
+/* ========================================
+   RESOURCES SECTION — lesson & exercise styles
+   Uses the site palette from /style.css
+   ======================================== */
+
+:root {
+  --soft-bg: #f2f3f5; /* very light grey for explanation boxes */
+}
+
+[data-theme="dark"] {
+  --soft-bg: rgba(255, 255, 255, 0.07);
+}
+
+/* Breadcrumbs */
+.crumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.crumb:not(:last-child)::after {
+  content: "›";
+  margin: 0 0.5rem;
+  color: var(--muted);
+}
+
+.crumb a {
+  text-decoration: none;
+}
+
+.crumb[aria-current="page"] {
+  color: var(--muted);
+}
+
+/* Lesson content column */
+.lesson-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.lesson-content h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.lesson-content h2 {
+  font-size: 1.35rem;
+  font-weight: 650;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.lesson-content dl dt {
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.lesson-content dl dd {
+  margin-bottom: 0.5rem;
+}
+
+.lesson-content kbd {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 0.1em 0.45em;
+  color: var(--text);
+  box-shadow: 0 1px 0 var(--card-border);
+}
+
+/* Exercise container (fieldset) */
+.exercise-container {
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--card-bg);
+}
+
+.exercise-name {
+  float: none;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Interactive number lines */
+.interactive-number-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.interactive-container {
+  flex: 1 1 320px;
+  max-width: 520px;
+  text-align: center;
+}
+
+.interactive-container h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin-bottom: 0.5rem;
+}
+
+.interactive-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.generic-button-aero {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.generic-button-aero:hover {
+  filter: brightness(0.9);
+}
+
+/* Collapsible explanation */
+.explanation-container {
+  margin-top: 1rem;
+}
+
+.explanation-container > a {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#explanationText {
+  background: var(--soft-bg);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-top: 0.75rem;
+}
+
+#explanationText p {
+  margin: 0;
+}
+
+/* Drag and drop exercise */
+#draggables {
+  min-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.draggable {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 650;
+  text-align: center;
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.drop-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.drop-zone {
+  flex: 1 1 220px;
+  min-height: 160px;
+  border: 2px dashed var(--card-border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  text-align: center;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.drop-zone h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand);
+  pointer-events: none;
+}
+
+.drop-zone.dragover {
+  border-color: var(--accent);
+  background: rgba(91, 192, 235, 0.08);
+}
+
+.drop-zone .draggable {
+  display: inline-flex;
+  margin: 0.25rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: default;
+  box-shadow: none;
+}
+
+.drop-zone-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.feedback-container p {
+  color: var(--brand);
+  font-weight: 600;
+  min-height: 1.5rem;
+  margin: 0.75rem 0 0;
+}
+
+#restart-button {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 0.4rem 0.9rem;
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+
+#restart-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#completion-message {
+  background: var(--soft-bg);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+/* Reflection exercise */
+.reflection {
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--card-bg);
+}
+
+.reflection-header {
+  float: none;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.reflection input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.reflection input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.reflection button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1.1rem;
+  font-weight: 650;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.reflection button:hover {
+  filter: brightness(0.92);
+}
+
+#student-reflections p {
+  background: var(--soft-bg);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  margin: 0.75rem 0 0;
+}
+
+#reflection-explanation {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--card-border);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Lesson pagination */
+.lesson-pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--card-border);
+}
+
+/* Resources hub cards */
+.lesson-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lesson-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.subject-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon {
+  opacity: 0.65;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: var(--card-border);
+  color: var(--muted);
+}
