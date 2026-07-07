@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /test.html
 
 Sitemap: https://www.fem-academy.com/sitemap.xml
