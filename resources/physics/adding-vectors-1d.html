@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free interactive Physics lesson on adding vectors in one dimension for GCSE and A-Level students. Practise finding resultant vectors with interactive number lines, drag-and-drop exercises and instant feedback." />
+  <title>Adding Vectors in One Dimension — Interactive GCSE & A-Level Physics Lesson | FemAcademy</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.fem-academy.com/resources/physics/adding-vectors-1d.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="FemAcademy" />
+  <meta property="og:title" content="Adding Vectors in One Dimension — Interactive GCSE & A-Level Physics Lesson" />
+  <meta property="og:description" content="Practise finding resultant vectors with interactive number lines, drag-and-drop exercises and instant feedback. Free Physics lesson for GCSE and A-Level." />
+  <meta property="og:url" content="https://www.fem-academy.com/resources/physics/adding-vectors-1d.html" />
+  <meta property="og:image" content="https://www.fem-academy.com/Images/hero-paperbackground.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../Images/ShortLogo-192.png">
+  <link rel="apple-touch-icon" href="../../Images/ShortLogo-192.png">
+
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../../style.css?v=2" />
+  <link rel="stylesheet" href="../resources.css?v=3" />
+
+  <!-- Google Analytics (loaded conditionally based on cookie consent) -->
+  <script>
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (cookieConsent === 'accepted') {
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T764LK08XQ';
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T764LK08XQ');
+    }
+  </script>
+
+  <!-- Structured data: learning resource + breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Adding Vectors in One Dimension",
+    "description": "Interactive Physics lesson for GCSE and A-Level on adding vectors in one dimension to find the resultant vector, with worked examples and practice questions.",
+    "educationalLevel": ["GCSE", "A-Level"],
+    "learningResourceType": "Lesson",
+    "teaches": "How to add vectors in one dimension and find the resultant vector",
+    "inLanguage": "en-GB",
+    "isAccessibleForFree": true,
+    "url": "https://www.fem-academy.com/resources/physics/adding-vectors-1d.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "FemAcademy",
+      "url": "https://www.fem-academy.com/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Resources", "item": "https://www.fem-academy.com/resources/" },
+      { "@type": "ListItem", "position": 2, "name": "Physics", "item": "https://www.fem-academy.com/resources/" },
+      { "@type": "ListItem", "position": 3, "name": "Adding Vectors in 1D" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img
+          src="../../Images/ShortLogo-192.png"
+          alt="FemAcademy logo"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+        />
+        <span class="brand-name">FemAcademy</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/#who-i-help">Who I help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#lessons-and-fees">Lessons and fees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#faq">FAQ</a>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a href="/#contact" class="btn btn-outline-primary btn-sm">
+              Get in touch
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dark Mode Toggle -->
+  <div class="container-fluid">
+    <div class="d-flex justify-content-end align-items-center py-2 px-3">
+      <span class="me-2 text-muted small">Use the switch to toggle between light and dark mode</span>
+      <button id="darkModeToggle" class="toggle-switch" aria-label="Toggle dark mode">
+        <span class="toggle-slider"></span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main" class="container px-4 py-4">
+    <!-- Breadcrumbs -->
+    <nav class="crumbs mb-4" aria-label="Breadcrumb">
+      <ol>
+        <li class="crumb"><a href="/resources/">Resources</a></li>
+        <li class="crumb"><a href="/resources/">Physics</a></li>
+        <li class="crumb" aria-current="page">Adding Vectors in 1D</li>
+      </ol>
+    </nav>
+
+    <div class="lesson-content">
+      <span class="subject-badge">GCSE &amp; A-Level Physics · Mechanics</span>
+      <h1>Adding Vectors in One Dimension</h1>
+      <p>In the previous lesson, we learned the difference between scalars and vectors: scalars have magnitude only, while vectors have both magnitude and direction.</p>
+      <p>In this lesson, we will add vectors in one dimension (1D) only — along a single straight line — to find the resultant vector. In the next lesson, we will add vectors in two dimensions (2D).</p>
+      <dl>
+        <dt>Resultant vector</dt>
+        <dd>A single vector that has the same effect as two or more vectors acting together.</dd>
+      </dl>
+
+      <!-- INTERACTIVE 1: ADDING VECTORS ON A NUMBER LINE -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Interactive: Adding Vectors on a Number Line</legend>
+        <p>The arrow shows a person walking along a straight road. Walking east is positive; walking west is negative. Use the <kbd>+</kbd> and <kbd>−</kbd> buttons to change the size of the first vector. Then click "Add a second vector" and change its size too. The resultant vector — the single vector with the same overall effect — is drawn underneath the number line.</p>
+        <p>Notice how the second vector starts where the first one ends — this is called the tip-to-tail method. Joining vectors like this lets us read off the resultant directly: it runs from the start of the first vector to the tip of the last.</p>
+
+        <div class="interactive-container mx-auto">
+          <svg id="addVectorsLine" width="500" height="185" viewBox="0 0 500 185" role="img" aria-label="Interactive number line from minus eight to plus eight kilometres for adding two vectors, with the resultant vector drawn below">
+            <!-- Number line -->
+            <line x1="50" y1="95" x2="450" y2="95" stroke="var(--text)" stroke-width="2" />
+            <!-- Major ticks with labels (every 2 km) -->
+            <line x1="50" y1="88" x2="50" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="50" y="120" text-anchor="middle" font-size="14" fill="var(--text)">-8</text>
+            <line x1="100" y1="88" x2="100" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="100" y="120" text-anchor="middle" font-size="14" fill="var(--text)">-6</text>
+            <line x1="150" y1="88" x2="150" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="150" y="120" text-anchor="middle" font-size="14" fill="var(--text)">-4</text>
+            <line x1="200" y1="88" x2="200" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="200" y="120" text-anchor="middle" font-size="14" fill="var(--text)">-2</text>
+            <line x1="250" y1="85" x2="250" y2="105" stroke="var(--text)" stroke-width="3" />
+            <text x="250" y="120" text-anchor="middle" font-size="14" fill="var(--text)">0</text>
+            <line x1="300" y1="88" x2="300" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="300" y="120" text-anchor="middle" font-size="14" fill="var(--text)">2</text>
+            <line x1="350" y1="88" x2="350" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="350" y="120" text-anchor="middle" font-size="14" fill="var(--text)">4</text>
+            <line x1="400" y1="88" x2="400" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="400" y="120" text-anchor="middle" font-size="14" fill="var(--text)">6</text>
+            <line x1="450" y1="88" x2="450" y2="102" stroke="var(--text)" stroke-width="2" />
+            <text x="450" y="120" text-anchor="middle" font-size="14" fill="var(--text)">8</text>
+            <!-- Minor ticks (odd km) -->
+            <line x1="75" y1="91" x2="75" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="125" y1="91" x2="125" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="175" y1="91" x2="175" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="225" y1="91" x2="225" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="275" y1="91" x2="275" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="325" y1="91" x2="325" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="375" y1="91" x2="375" y2="99" stroke="var(--text)" stroke-width="1" />
+            <line x1="425" y1="91" x2="425" y2="99" stroke="var(--text)" stroke-width="1" />
+
+            <!-- Direction labels -->
+            <text x="50" y="136" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">← West</text>
+            <text x="450" y="136" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+
+            <!-- Vector 1 (drawn above the line) -->
+            <line id="av-vec1-line" x1="250" y1="62" x2="295" y2="62" stroke="var(--accent)" stroke-width="3" />
+            <polygon id="av-vec1-head" points="325,62 295,51.5 295,72.5" fill="var(--accent)" />
+            <circle id="av-vec1-dot" cx="250" cy="62" r="6" fill="var(--accent)" style="display: none;" />
+            <text id="av-vec1-label" x="287" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)">+3</text>
+
+            <!-- Vector 2 (tip-to-tail, drawn above vector 1) -->
+            <g id="av-vec2-group" style="display: none;">
+              <line id="av-vec2-line" x1="325" y1="38" x2="345" y2="38" stroke="var(--brand)" stroke-width="3" />
+              <polygon id="av-vec2-head" points="375,38 345,27.5 345,48.5" fill="var(--brand)" />
+              <circle id="av-vec2-dot" cx="325" cy="38" r="6" fill="var(--brand)" style="display: none;" />
+              <text id="av-vec2-label" x="350" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="var(--brand)">+2</text>
+            </g>
+
+            <!-- Resultant (drawn below the line) -->
+            <line id="av-res-line" x1="250" y1="152" x2="295" y2="152" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+            <polygon id="av-res-head" points="325,152 295,141.5 295,162.5" fill="var(--accent)" />
+            <circle id="av-res-dot" cx="250" cy="152" r="6" fill="var(--accent)" style="display: none;" />
+            <text id="av-res-label" x="287" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">Resultant</text>
+          </svg>
+
+          <div class="controls-row">
+            <div class="controls">
+              <span class="fw-bold">First vector:</span>
+              <button id="av1MinusBtn" class="generic-button-aero" aria-label="Decrease first vector value">−</button>
+              <button id="av1PlusBtn" class="generic-button-aero" aria-label="Increase first vector value">+</button>
+            </div>
+            <div class="controls">
+              <button id="addSecondVectorBtn" class="btn btn-outline-primary">Add a second vector</button>
+            </div>
+            <div class="controls" id="av2Controls" style="display: none;">
+              <span class="fw-bold">Second vector:</span>
+              <button id="av2MinusBtn" class="generic-button-brand" aria-label="Decrease second vector value">−</button>
+              <button id="av2PlusBtn" class="generic-button-brand" aria-label="Increase second vector value">+</button>
+            </div>
+          </div>
+
+          <p id="av-caption" class="svg-caption" aria-live="polite"></p>
+        </div>
+
+        <!-- Collapsible Explanation Section -->
+        <div class="explanation-container">
+          <a id="toggleExplanation" role="button" tabindex="0">▼ Show Explanation (Click to expand)</a>
+          <div id="explanationText" style="display: none;">
+            <p>To add vectors in one dimension, we simply add their values, keeping the signs. Two vectors in the same direction make the resultant longer. Two vectors in opposite directions partly (or completely) cancel each other out. The sign of the resultant tells you its direction: positive means east, negative means west.</p>
+          </div>
+        </div>
+      </fieldset>
+      <!-- END INTERACTIVE 1 -->
+
+      <!-- REFLECTION -->
+      <fieldset class="reflection">
+        <legend class="reflection-header">Reflection</legend>
+        <p>Using the interactive above, set the first vector to point east (positive) and the second to point west (negative). The person has now walked two stretches of road, yet the resultant vector is shorter than the two walks combined. What is the difference between the total distance the person walked and their displacement? Type your answer and press <kbd>Enter</kbd> or click the button below.</p>
+        <input type="text" id="reflection-input" placeholder="Type your answer here and press Enter or click the button" aria-label="Your reflection answer">
+        <button id="reflection-enter">Enter</button>
+        <button id="reflection-clear">Clear</button>
+        <div id="student-reflections"></div>
+        <div id="reflection-explanation">Reflection exercises help you pause, think, and connect ideas to real-world examples. Write down what you understand and where you're unsure, then refine your thoughts by checking your response against the feedback.</div>
+      </fieldset>
+      <!-- END REFLECTION -->
+
+      <h2>Example 1: Walking in the Same Direction</h2>
+      <p>A hiker walks 8 km east, stops for the night, and the next day walks another 6 km east. What is their resultant displacement?</p>
+
+      <svg width="500" height="175" viewBox="0 0 500 175" role="img" aria-label="Number line showing an 8 km east vector followed tip-to-tail by a 6 km east vector, with a 14 km east resultant vector drawn below" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <!-- Vectors (tip-to-tail on one row) -->
+        <line x1="50" y1="55" x2="220" y2="55" stroke="var(--accent)" stroke-width="3" />
+        <polygon points="250,55 220,44.5 220,65.5" fill="var(--accent)" />
+        <text x="150" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)">8 km</text>
+        <line x1="250" y1="55" x2="370" y2="55" stroke="var(--brand)" stroke-width="3" />
+        <polygon points="400,55 370,44.5 370,65.5" fill="var(--brand)" />
+        <text x="325" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="var(--brand)">6 km</text>
+        <!-- Number line 0 to 16 km -->
+        <line x1="50" y1="85" x2="450" y2="85" stroke="var(--text)" stroke-width="2" />
+        <line x1="50" y1="78" x2="50" y2="92" stroke="var(--text)" stroke-width="3" />
+        <text x="50" y="110" text-anchor="middle" font-size="14" fill="var(--text)">0</text>
+        <line x1="100" y1="78" x2="100" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="100" y="110" text-anchor="middle" font-size="14" fill="var(--text)">2</text>
+        <line x1="150" y1="78" x2="150" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="150" y="110" text-anchor="middle" font-size="14" fill="var(--text)">4</text>
+        <line x1="200" y1="78" x2="200" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="200" y="110" text-anchor="middle" font-size="14" fill="var(--text)">6</text>
+        <line x1="250" y1="78" x2="250" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="250" y="110" text-anchor="middle" font-size="14" fill="var(--text)">8</text>
+        <line x1="300" y1="78" x2="300" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="300" y="110" text-anchor="middle" font-size="14" fill="var(--text)">10</text>
+        <line x1="350" y1="78" x2="350" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="350" y="110" text-anchor="middle" font-size="14" fill="var(--text)">12</text>
+        <line x1="400" y1="78" x2="400" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="400" y="110" text-anchor="middle" font-size="14" fill="var(--text)">14</text>
+        <line x1="450" y1="78" x2="450" y2="92" stroke="var(--text)" stroke-width="2" />
+        <text x="450" y="110" text-anchor="middle" font-size="14" fill="var(--text)">16</text>
+        <!-- Direction labels -->
+        <text x="50" y="126" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">← West</text>
+        <text x="450" y="126" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+        <!-- Resultant -->
+        <line x1="50" y1="142" x2="370" y2="142" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+        <polygon points="400,142 370,131.5 370,152.5" fill="var(--accent)" />
+        <text x="225" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">Resultant = 14 km east</text>
+      </svg>
+
+      <p>Both vectors point east, so we add them: (+8) + (+6) = +14. The resultant displacement is 14 km east.</p>
+
+      <h2>Example 2: Walking in Opposite Directions</h2>
+      <p>This time, the hiker walks 8 km east, then turns around and walks 6 km west. West is the negative direction, so the second vector is −6 km.</p>
+
+      <svg width="500" height="185" viewBox="0 0 500 185" role="img" aria-label="Number line showing an 8 km east vector followed by a 6 km west vector pointing back, with a 2 km east resultant vector drawn below" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <!-- Vector 1: 8 km east -->
+        <line x1="50" y1="42" x2="220" y2="42" stroke="var(--accent)" stroke-width="3" />
+        <polygon points="250,42 220,31.5 220,52.5" fill="var(--accent)" />
+        <text x="150" y="31" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)">8 km</text>
+        <!-- Vector 2: 6 km west, tip-to-tail pointing back -->
+        <line x1="250" y1="68" x2="130" y2="68" stroke="var(--brand)" stroke-width="3" />
+        <polygon points="100,68 130,57.5 130,78.5" fill="var(--brand)" />
+        <text x="175" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="var(--brand)">6 km</text>
+        <!-- Number line 0 to 16 km -->
+        <line x1="50" y1="95" x2="450" y2="95" stroke="var(--text)" stroke-width="2" />
+        <line x1="50" y1="88" x2="50" y2="102" stroke="var(--text)" stroke-width="3" />
+        <text x="50" y="120" text-anchor="middle" font-size="14" fill="var(--text)">0</text>
+        <line x1="100" y1="88" x2="100" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="100" y="120" text-anchor="middle" font-size="14" fill="var(--text)">2</text>
+        <line x1="150" y1="88" x2="150" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="150" y="120" text-anchor="middle" font-size="14" fill="var(--text)">4</text>
+        <line x1="200" y1="88" x2="200" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="200" y="120" text-anchor="middle" font-size="14" fill="var(--text)">6</text>
+        <line x1="250" y1="88" x2="250" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="250" y="120" text-anchor="middle" font-size="14" fill="var(--text)">8</text>
+        <line x1="300" y1="88" x2="300" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="300" y="120" text-anchor="middle" font-size="14" fill="var(--text)">10</text>
+        <line x1="350" y1="88" x2="350" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="350" y="120" text-anchor="middle" font-size="14" fill="var(--text)">12</text>
+        <line x1="400" y1="88" x2="400" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="400" y="120" text-anchor="middle" font-size="14" fill="var(--text)">14</text>
+        <line x1="450" y1="88" x2="450" y2="102" stroke="var(--text)" stroke-width="2" />
+        <text x="450" y="120" text-anchor="middle" font-size="14" fill="var(--text)">16</text>
+        <!-- Direction labels -->
+        <text x="50" y="136" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">← West</text>
+        <text x="450" y="136" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+        <!-- Resultant -->
+        <line x1="50" y1="152" x2="70" y2="152" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+        <polygon points="100,152 70,141.5 70,162.5" fill="var(--accent)" />
+        <text x="112" y="157" text-anchor="start" font-size="13" font-weight="700" fill="var(--text)">Resultant = 2 km east</text>
+      </svg>
+
+      <p>(+8) + (−6) = +2. The resultant displacement is just 2 km east — even though the hiker walked a total distance of 14 km.</p>
+
+      <div class="definition-box">
+        <dl>
+          <dt>Distance</dt>
+          <dd>How far an object moves in total, along its path. Distance does not involve direction — it is a scalar quantity.</dd>
+          <dt>Displacement</dt>
+          <dd>The distance from the start point to the finish point measured in a straight line, together with the direction of that line. Displacement is a vector quantity.</dd>
+        </dl>
+      </div>
+      <p>In Example 2, the hiker's distance is 8 + 6 = 14 km, but their displacement is only 2 km east. When we add vectors, we are finding the displacement, not the distance. This distinction matters in physics: it is the reason a runner who completes a full lap of a 400 m track has travelled a distance of 400 m but has a displacement of zero.</p>
+
+      <!-- EXERCISE: ADDING VECTORS IN 1D -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Exercise: Adding Vectors in 1D</legend>
+
+        <!-- 4.1 Interactive number line -->
+        <p>Drag vectors onto the number line to build each problem — on a touchscreen, tap to place them. Click and drag the tip of a vector to change its size and direction. You can place up to three vectors. Tick "Show resultant vector" to check the single vector they add up to. Use <kbd>↻</kbd> to clear the line and start again.</p>
+
+        <div class="vector-tray" id="vector-tray">
+          <button type="button" class="vector-token" draggable="true">⟶ Vector</button>
+          <button type="button" class="vector-token" draggable="true">⟶ Vector</button>
+          <button type="button" class="vector-token" draggable="true">⟶ Vector</button>
+        </div>
+
+        <div class="interactive-container mx-auto" id="ex-svg-wrap">
+          <svg id="exerciseLine" width="500" height="198" viewBox="0 0 500 198" role="img" aria-label="Interactive number line from minus twenty to plus twenty for building vector addition problems, with an optional resultant vector drawn below">
+            <!-- Axis (ticks and labels generated by JS) -->
+            <g id="ex-axis"></g>
+            <!-- Placed vectors -->
+            <g id="ex-vectors"></g>
+            <!-- Resultant -->
+            <g id="ex-resultant" style="display: none;">
+              <line id="ex-res-line" x1="250" y1="168" x2="250" y2="168" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+              <polygon id="ex-res-head" points="250,168 250,168 250,168" fill="var(--accent)" style="display: none;" />
+              <circle id="ex-res-dot" cx="250" cy="168" r="6" fill="var(--accent)" style="display: none;" />
+              <text id="ex-res-label" x="250" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">Resultant</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mt-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ex-show-resultant">
+            <label class="form-check-label" for="ex-show-resultant">Show resultant vector</label>
+          </div>
+          <button id="restart-button" aria-label="Restart exercise">↻ Restart</button>
+        </div>
+
+        <!-- 4.2 Questions -->
+        <hr class="my-4">
+        <p>Answer the question below, then press <kbd>Enter</kbd> or click Check. You can drag the vectors onto the number line above to see the answer visually, but you don't have to — it is there to help. The four circles show your progress: a circle turns green when you answer that type of question correctly. Click "New question" at any time to try different numbers.</p>
+
+        <div class="progress-circles" role="group" aria-label="Question progress">
+          <button type="button" class="progress-circle" id="circle-0" aria-label="Question type 1"></button>
+          <button type="button" class="progress-circle" id="circle-1" aria-label="Question type 2"></button>
+          <button type="button" class="progress-circle" id="circle-2" aria-label="Question type 3"></button>
+          <button type="button" class="progress-circle" id="circle-3" aria-label="Question type 4"></button>
+        </div>
+
+        <p id="question-text" class="fw-bold"></p>
+
+        <div class="answer-row">
+          <input type="text" id="answer-input" inputmode="numeric" aria-label="Your answer">
+          <span id="answer-unit" class="answer-unit">m</span>
+          <button id="check-button" class="qa-button">Check</button>
+          <button id="new-question-button" class="qa-button-secondary">New question</button>
+        </div>
+
+        <div class="feedback-container">
+          <p id="question-feedback" aria-live="polite"></p>
+        </div>
+      </fieldset>
+      <!-- END EXERCISE -->
+
+      <!-- 4.3 Completion feedback box -->
+      <div id="completion-message" hidden>Well done — all four green! You can now add vectors in one dimension, whatever their signs. This skill sits underneath a huge amount of physics: resultant forces decide whether an object accelerates or stays put, and displacement — not distance — is what velocity is built from. Whenever several quantities act along one line, you now know how to reduce them to a single resultant, and what its sign tells you about direction.</div>
+
+      <p>Adding vectors along a single line is the foundation for everything that follows. In the next lesson, we will add vectors in two dimensions, where direction can no longer be captured by a simple + or − sign — and where scale drawings and triangles come in.</p>
+
+      <!-- Lesson pagination -->
+      <div class="lesson-pagination">
+        <a href="./scalars-vectors.html" class="btn btn-outline-primary">← Previous: Scalars and Vectors</a>
+        <button class="btn btn-outline-secondary" disabled>Next: Adding Vectors in 2D (coming soon)</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-top mt-5">
+    <div class="container py-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="text-muted small mb-0">© <span id="year"></span> FemAcademy — London, UK</p>
+        <p class="mb-0">
+          <a href="/" class="text-decoration-none small">Home</a>
+          <span class="text-muted mx-2">·</span>
+          <a href="/resources/" class="text-decoration-none small">Resources</a>
+          <span class="text-muted mx-2">·</span>
+          <a href="/#contact" class="text-decoration-none small">Get in touch</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../../script.js?v=2"></script>
+  <script src="./adding-vectors-1d.js?v=1"></script>
+</body>
+</html>

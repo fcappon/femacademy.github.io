@@ -141,6 +141,48 @@
   filter: brightness(0.9);
 }
 
+.generic-button-brand {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.generic-button-brand:hover {
+  filter: brightness(0.9);
+}
+
+/* Horizontal row of vector control groups (wraps on narrow screens) */
+.controls-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Soft grey definition box */
+.definition-box {
+  background: var(--soft-bg);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.definition-box dl {
+  margin: 0;
+}
+
+.definition-box dd:last-child {
+  margin-bottom: 0;
+}
+
 /* Collapsible explanation */
 .explanation-container {
   margin-top: 1rem;
@@ -327,6 +369,126 @@
   border-top: 1px dashed var(--card-border);
   color: var(--muted);
   line-height: 1.6;
+}
+
+/* Interactive SVG captions */
+.svg-caption {
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+  min-height: 1.5rem;
+  text-align: center;
+}
+
+/* Vector tray (drag-to-build exercise) */
+.vector-tray {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.vector-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-weight: 650;
+  cursor: grab;
+}
+
+.vector-token:hover {
+  filter: brightness(0.9);
+}
+
+.vector-handle {
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+/* Question progress circles */
+.progress-circles {
+  display: flex;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.progress-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.progress-circle.current {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(91, 192, 235, 0.25);
+}
+
+.progress-circle.solved {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+/* Question answer row */
+.answer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.answer-row input {
+  width: 120px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.answer-row input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.answer-unit {
+  font-weight: 700;
+}
+
+.qa-button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1.1rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.qa-button:hover {
+  filter: brightness(0.9);
+}
+
+.qa-button-secondary {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+}
+
+.qa-button-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* Lesson pagination */
