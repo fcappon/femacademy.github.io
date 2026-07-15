@@ -491,6 +491,48 @@
   color: var(--accent);
 }
 
+/* "Where this fits in your exam spec" box */
+.spec-box {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.spec-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.spec-box-table {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+
+.spec-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.spec-box th,
+.spec-box td {
+  border: 1px solid var(--card-border);
+  padding: 0.4rem 0.75rem;
+  text-align: left;
+}
+
+.spec-box th {
+  font-weight: 650;
+}
+
+.spec-box-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 /* Lesson pagination */
 .lesson-pagination {
   display: flex;

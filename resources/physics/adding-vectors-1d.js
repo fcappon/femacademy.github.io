@@ -105,6 +105,7 @@
     v2 = (v1 + 2 <= AV_MAX) ? 2 : -2;
     e.target.style.display = "none";
     document.getElementById("av2Controls").style.display = "flex";
+    document.getElementById("tipToTailNote").removeAttribute("hidden");
     updateInteractive1();
   });
 
@@ -359,7 +360,7 @@
         const b = randInt(1, 20 - a);
         return { a, b, answer: a + b };
       },
-      text: (q) => "A person walks " + q.a + " metres east from their home to the postbox, then walks a further " + q.b + " metres east to the bus stop. What is their displacement? (Displacement is the resultant vector — take east as positive.)"
+      text: (q) => "A person walks " + q.a + " metres east from their home to the postbox, then walks a further " + q.b + " metres east to the bus stop. What is their displacement? Take east as positive."
     },
     {
       unit: "N",
@@ -368,7 +369,7 @@
         const b = randInt(1, 20 - a);
         return { a, b, answer: -(a + b) };
       },
-      text: (q) => "Two students push a broken-down go-kart along a straight road. One pushes with a force of " + q.a + " newtons west, the other with a force of " + q.b + " newtons west. Taking east as positive, what is the resultant force on the go-kart?"
+      text: (q) => "Two students push a broken-down go-kart along a straight road. One pushes with a force of " + q.a + " newtons to the left, the other with a force of " + q.b + " newtons to the left. Taking right as positive, what is the resultant force on the go-kart?"
     },
     {
       unit: "m",
@@ -383,7 +384,7 @@
         }
         return { a, b, answer: b - a };
       },
-      text: (q) => "A person walks " + q.a + " metres west from their home to the supermarket. They notice their keys have fallen out of their pocket, walk " + q.b + " metres east, and find them there. What is their displacement from home? (Displacement is the resultant vector — take east as positive.)"
+      text: (q) => "A person walks " + q.a + " metres west from their home to the supermarket. They notice their keys have fallen out of their pocket, walk " + q.b + " metres east, and find them there. What is their displacement from home? Take east as positive."
     },
     {
       unit: "N",
@@ -391,7 +392,7 @@
         const a = randInt(1, 20);
         return { a, answer: 0 };
       },
-      text: (q) => "In a tug of war, the team on the east side pulls the rope with a force of " + q.a + " newtons east, while the team on the west side pulls with a force of " + q.a + " newtons west. Taking east as positive, what is the resultant force on the rope?"
+      text: (q) => "In a tug of war, the team on the left side pulls the rope with a force of " + q.a + " newtons, while the team on the right side pulls with a force of " + q.a + " newtons. Taking right as positive, what is the resultant force on the rope?"
     }
   ];
 

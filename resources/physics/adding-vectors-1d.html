@@ -60,6 +60,15 @@
     "educationalLevel": ["GCSE", "A-Level"],
     "learningResourceType": "Lesson",
     "teaches": "How to add vectors in one dimension and find the resultant vector",
+    "about": ["Vector Addition", "Resultant Vector", "Resultant Force", "Distance vs Displacement", "Tip-to-Tail Method", "Balanced Forces"],
+    "educationalAlignment": [
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "AQA GCSE Physics 8463", "targetName": "4.5 Forces" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "Edexcel GCSE Physics 1PH0", "targetName": "Topic 2 Motion and Forces" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "OCR Gateway GCSE Physics A J249", "targetName": "Topic P2 Forces" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "AQA A-Level Physics 7408", "targetName": "3.4 Mechanics and Materials" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "Edexcel A-Level Physics 9PH0", "targetName": "Topic 2 Mechanics" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "OCR A A-Level Physics H556", "targetName": "Module 3 Forces and Motion" }
+    ],
     "inLanguage": "en-GB",
     "isAccessibleForFree": true,
     "url": "https://www.fem-academy.com/resources/physics/adding-vectors-1d.html",
@@ -160,20 +169,24 @@
     </nav>
 
     <div class="lesson-content">
-      <span class="subject-badge">GCSE &amp; A-Level Physics · Mechanics</span>
+      <span class="subject-badge">GCSE &amp; A-Level Physics · Forces and Motion</span>
       <h1>Adding Vectors in One Dimension</h1>
       <p>In the previous lesson, we learned the difference between scalars and vectors: scalars have magnitude only, while vectors have both magnitude and direction.</p>
-      <p>In this lesson, we will add vectors in one dimension (1D) only — along a single straight line — to find the resultant vector. In the next lesson, we will add vectors in two dimensions (2D).</p>
-      <dl>
-        <dt>Resultant vector</dt>
-        <dd>A single vector that has the same effect as two or more vectors acting together.</dd>
-      </dl>
+      <p>In this lesson, we will add vectors in one dimension (1D) only — along a single straight line — to find the resultant vector. In the next lesson, we will add vectors in two dimensions (2D). <br> <br> Before we start let's have a look at the definition of what a resultant vector is.
+      </p>
+
+      <div class="definition-box">
+        <dl>
+          <dt>Resultant vector</dt>
+          <dd> A single vector that can replace two or more vectors and have the same effect as all of them acting together. We find it by adding the vectors, so the resultant is also called the vector sum.</dd>
+          <dd>What does "the same effect" mean? Imagine a person walks 3 km east and then 2 km east. One single walk of 5 km east would bring them to exactly the same finishing point — so that single walk is the resultant of the two. Replacing several vectors with their resultant changes nothing about the outcome; it just describes it with one vector instead of several.</dd>
+        </dl>
+      </div>
 
       <!-- INTERACTIVE 1: ADDING VECTORS ON A NUMBER LINE -->
       <fieldset class="exercise-container">
         <legend class="exercise-name">Interactive: Adding Vectors on a Number Line</legend>
         <p>The arrow shows a person walking along a straight road. Walking east is positive; walking west is negative. Use the <kbd>+</kbd> and <kbd>−</kbd> buttons to change the size of the first vector. Then click "Add a second vector" and change its size too. The resultant vector — the single vector with the same overall effect — is drawn underneath the number line.</p>
-        <p>Notice how the second vector starts where the first one ends — this is called the tip-to-tail method. Joining vectors like this lets us read off the resultant directly: it runs from the start of the first vector to the tip of the last.</p>
 
         <div class="interactive-container mx-auto">
           <svg id="addVectorsLine" width="500" height="185" viewBox="0 0 500 185" role="img" aria-label="Interactive number line from minus eight to plus eight kilometres for adding two vectors, with the resultant vector drawn below">
@@ -252,6 +265,11 @@
           <p id="av-caption" class="svg-caption" aria-live="polite"></p>
         </div>
 
+        <!-- Tip-to-tail note (revealed when the second vector is added) -->
+        <div id="tipToTailNote" class="definition-box" hidden>
+          <p class="mb-0">Notice how the second vector starts where the first one ends — just as the second stage of a journey begins where the first stage finished. This way of joining vectors is called the tip-to-tail method: the tail (start) of each new vector is placed at the tip (arrowhead) of the one before. Drawn like this, the resultant simply runs from the tail of the first vector to the tip of the last.</p>
+        </div>
+
         <!-- Collapsible Explanation Section -->
         <div class="explanation-container">
           <a id="toggleExplanation" role="button" tabindex="0">▼ Show Explanation (Click to expand)</a>
@@ -273,6 +291,17 @@
         <div id="reflection-explanation">Reflection exercises help you pause, think, and connect ideas to real-world examples. Write down what you understand and where you're unsure, then refine your thoughts by checking your response against the feedback.</div>
       </fieldset>
       <!-- END REFLECTION -->
+
+      <p>Let's have a look at some examples, for which we will use distance and displacement.</p>
+
+      <div class="definition-box">
+              <dl>
+                <dt>Distance</dt>
+                <dd>How far an object moves in total, along its path. Distance does not involve direction — it is a scalar quantity.</dd>
+                <dt>Displacement</dt>
+                <dd>The distance from the start point to the finish point measured in a straight line, together with the direction of that line. Displacement is a vector quantity.</dd>
+              </dl>
+      </div>
 
       <h2>Example 1: Walking in the Same Direction</h2>
       <p>A hiker walks 8 km east, stops for the night, and the next day walks another 6 km east. What is their resultant displacement?</p>
@@ -315,7 +344,6 @@
       </svg>
 
       <p>Both vectors point east, so we add them: (+8) + (+6) = +14. The resultant displacement is 14 km east.</p>
-
       <h2>Example 2: Walking in Opposite Directions</h2>
       <p>This time, the hiker walks 8 km east, then turns around and walks 6 km west. West is the negative direction, so the second vector is −6 km.</p>
 
@@ -359,14 +387,7 @@
 
       <p>(+8) + (−6) = +2. The resultant displacement is just 2 km east — even though the hiker walked a total distance of 14 km.</p>
 
-      <div class="definition-box">
-        <dl>
-          <dt>Distance</dt>
-          <dd>How far an object moves in total, along its path. Distance does not involve direction — it is a scalar quantity.</dd>
-          <dt>Displacement</dt>
-          <dd>The distance from the start point to the finish point measured in a straight line, together with the direction of that line. Displacement is a vector quantity.</dd>
-        </dl>
-      </div>
+      
       <p>In Example 2, the hiker's distance is 8 + 6 = 14 km, but their displacement is only 2 km east. When we add vectors, we are finding the displacement, not the distance. This distinction matters in physics: it is the reason a runner who completes a full lap of a 400 m track has travelled a distance of 400 m but has a displacement of zero.</p>
 
       <!-- EXERCISE: ADDING VECTORS IN 1D -->
@@ -435,7 +456,25 @@
       <!-- 4.3 Completion feedback box -->
       <div id="completion-message" hidden>Well done — all four green! You can now add vectors in one dimension, whatever their signs. This skill sits underneath a huge amount of physics: resultant forces decide whether an object accelerates or stays put, and displacement — not distance — is what velocity is built from. Whenever several quantities act along one line, you now know how to reduce them to a single resultant, and what its sign tells you about direction.</div>
 
-      <p>Adding vectors along a single line is the foundation for everything that follows. In the next lesson, we will add vectors in two dimensions, where direction can no longer be captured by a simple + or − sign — and where scale drawings and triangles come in.</p>
+      <p>Adding vectors along a single line is the foundation for everything that follows. In the next lesson, we will add vectors in two dimensions, where direction can no longer be captured by a simple + or − sign.</p>
+
+      <details class="spec-box">
+        <summary>Where this fits in your exam specification</summary>
+        <div class="spec-box-table">
+          <table>
+            <thead><tr><th>Exam board</th><th>Topic</th></tr></thead>
+            <tbody>
+              <tr><td>AQA GCSE Physics</td><td>4.5 Forces</td></tr>
+              <tr><td>Edexcel GCSE Physics</td><td>Topic 2 — Motion and Forces</td></tr>
+              <tr><td>OCR Gateway GCSE Physics</td><td>Topic P2 — Forces</td></tr>
+              <tr><td>AQA A-Level Physics</td><td>3.4 Mechanics and Materials</td></tr>
+              <tr><td>Edexcel A-Level Physics</td><td>Topic 2 — Mechanics</td></tr>
+              <tr><td>OCR A A-Level Physics</td><td>Module 3 — Forces and Motion</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="spec-box-note">Studying a different board or combined science? The content of this lesson is the same — only the topic name differs.</p>
+      </details>
 
       <!-- Lesson pagination -->
       <div class="lesson-pagination">
@@ -449,7 +488,7 @@
   <footer class="border-top mt-5">
     <div class="container py-4">
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <p class="text-muted small mb-0">© <span id="year"></span> FemAcademy — London, UK</p>
+        <p class="text-muted small mb-0">© <span id="year"></span> FemAcademy — London, UK. All rights reserved.</p>
         <p class="mb-0">
           <a href="/" class="text-decoration-none small">Home</a>
           <span class="text-muted mx-2">·</span>
