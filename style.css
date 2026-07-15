@@ -433,6 +433,12 @@ a:hover { color: var(--text); }
   color: var(--brand);
 }
 
+/* Highlight the current page in the navbar */
+[data-theme="dark"] .navbar-nav .nav-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 [data-theme="dark"] .text-muted {
   color: var(--muted) !important;
 }
