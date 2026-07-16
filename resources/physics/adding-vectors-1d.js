@@ -11,6 +11,26 @@
   const headPoints = (tipX, y, dir) =>
     tipX + "," + y + " " + (tipX - dir * HEAD_LEN) + "," + (y - HEAD_HALF) + " " + (tipX - dir * HEAD_LEN) + "," + (y + HEAD_HALF);
 
+  // Step once on tap/click, then auto-repeat while the button is held down.
+  // Keyboard activation (Enter/Space) arrives as a click with detail 0.
+  const bindStepper = (btn, fn) => {
+    let delay = null, repeat = null;
+    const stop = () => {
+      clearTimeout(delay);
+      clearInterval(repeat);
+      delay = repeat = null;
+    };
+    btn.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      e.preventDefault();
+      fn();
+      delay = setTimeout(() => { repeat = setInterval(fn, 90); }, 400);
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach((type) => btn.addEventListener(type, stop));
+    btn.addEventListener("contextmenu", (e) => e.preventDefault());
+    btn.addEventListener("click", (e) => { if (e.detail === 0) fn(); });
+  };
+
   // Shared drawing of a shaft + head + zero-dot arrow between two SVG x positions
   const drawArrow = (els, tailX, tipX, y) => {
     if (tailX === tipX) {
@@ -95,10 +115,10 @@
     updateInteractive1();
   };
 
-  document.getElementById("av1MinusBtn").addEventListener("click", () => changeV1(-1));
-  document.getElementById("av1PlusBtn").addEventListener("click", () => changeV1(1));
-  document.getElementById("av2MinusBtn").addEventListener("click", () => changeV2(-1));
-  document.getElementById("av2PlusBtn").addEventListener("click", () => changeV2(1));
+  bindStepper(document.getElementById("av1MinusBtn"), () => changeV1(-1));
+  bindStepper(document.getElementById("av1PlusBtn"), () => changeV1(1));
+  bindStepper(document.getElementById("av2MinusBtn"), () => changeV2(-1));
+  bindStepper(document.getElementById("av2PlusBtn"), () => changeV2(1));
 
   document.getElementById("addSecondVectorBtn").addEventListener("click", (e) => {
     hasV2 = true;
@@ -160,7 +180,6 @@
   const EX_MIN = -20, EX_MAX = 20;
   const exX = (v) => 250 + 10 * v;
   const SVGNS = "http://www.w3.org/2000/svg";
-  const exSvg = document.getElementById("exerciseLine");
   const ROW_Y = [96, 62, 28];
   const COLOURS = ["var(--accent)", "var(--brand)", "var(--success)"];
 
@@ -192,17 +211,7 @@
 
   const vectors = [];      // placed vector values, in placement order
   const vectorEls = [];    // corresponding SVG element groups
-  const tokens = [...document.querySelectorAll("#vector-tray .vector-token")];
   const showResultantBox = document.getElementById("ex-show-resultant");
-
-  // Convert a pointer event to SVG x coordinate
-  const svgPointX = (e) => {
-    const p = exSvg.createSVGPoint();
-    p.x = e.clientX;
-    p.y = e.clientY;
-    const ctm = exSvg.getScreenCTM();
-    return ctm ? p.matrixTransform(ctm.inverse()).x : 250;
-  };
 
   // Allowed value range for vector i so every tip stays within the line
   const allowedRange = (i) => {
@@ -227,16 +236,11 @@
       els.label.setAttribute("x", exX((from + to) / 2));
       els.label.setAttribute("y", y - 9);
       els.label.textContent = fmtSigned(val);
-      [els.handle, els.hit].forEach((h) => {
-        h.setAttribute("cx", exX(to));
-        h.setAttribute("cy", y);
-      });
       pre = to;
     });
 
-    // Tray shows the remaining tokens
-    const remaining = 3 - vectors.length;
-    tokens.forEach((t, j) => { t.style.display = j < remaining ? "" : "none"; });
+    // "Add a vector" stays available until three vectors are placed
+    document.getElementById("addVectorWrap").style.display = vectors.length >= 3 ? "none" : "flex";
 
     // Resultant
     const group = document.getElementById("ex-resultant");
@@ -257,46 +261,46 @@
   };
 
   // Create the SVG elements for a newly placed vector and wire up tip dragging
-  const createVectorEls = (i) => {
+  const createVectorEls = (i, value) => {
     const colour = COLOURS[i];
     const g = mk("g", {});
     const line = mk("line", { stroke: colour, "stroke-width": 3 });
     const head = mk("polygon", { fill: colour });
     const dot = mk("circle", { r: 6, fill: colour, style: "display: none;" });
     const label = mk("text", { "text-anchor": "middle", "font-size": 13, "font-weight": 700, fill: colour });
-    const handle = mk("circle", { r: 5, fill: "var(--bg)", stroke: colour, "stroke-width": 2, class: "vector-handle" });
-    const hit = mk("circle", { r: 14, fill: "transparent", class: "vector-handle" });
-    g.append(line, head, dot, label, handle, hit);
+    g.append(line, head, dot, label);
     document.getElementById("ex-vectors").appendChild(g);
 
-    hit.addEventListener("pointerdown", (e) => {
-      if (e.pointerType === "mouse" && e.button !== 0) return;
-      e.preventDefault();
-      try { hit.setPointerCapture(e.pointerId); } catch (_) { /* pointer already inactive */ }
+    // +/− controls in the same style as the first interactive
+    const BTN_CLASS = ["generic-button-aero", "generic-button-brand", "generic-button-success"];
+    const row = document.createElement("div");
+    row.className = "controls";
+    const ctrlLabel = document.createElement("span");
+    ctrlLabel.className = "fw-bold";
+    ctrlLabel.textContent = "Vector " + (i + 1) + ":";
+    const change = (d) => {
       const [lo, hi] = allowedRange(i);
-      let pre = 0;
-      for (let j = 0; j < i; j++) pre += vectors[j];
-      const onMove = (ev) => {
-        if (ev.pointerId !== e.pointerId) return;
-        const raw = Math.round((svgPointX(ev) - 250) / 10 - pre);
-        const nv = Math.min(hi, Math.max(lo, raw));
-        if (nv !== vectors[i]) {
-          vectors[i] = nv;
-          updateExercise();
-        }
-      };
-      const onUp = (ev) => {
-        if (ev.pointerId !== e.pointerId) return;
-        window.removeEventListener("pointermove", onMove);
-        window.removeEventListener("pointerup", onUp);
-        window.removeEventListener("pointercancel", onUp);
-      };
-      window.addEventListener("pointermove", onMove);
-      window.addEventListener("pointerup", onUp);
-      window.addEventListener("pointercancel", onUp);
-    });
+      const nv = Math.min(hi, Math.max(lo, vectors[i] + d));
+      if (nv !== vectors[i]) {
+        vectors[i] = nv;
+        updateExercise();
+      }
+    };
+    const minusBtn = document.createElement("button");
+    minusBtn.className = BTN_CLASS[i];
+    minusBtn.textContent = "−";
+    minusBtn.setAttribute("aria-label", "Decrease vector " + (i + 1) + " value");
+    bindStepper(minusBtn, () => change(-1));
+    const plusBtn = document.createElement("button");
+    plusBtn.className = BTN_CLASS[i];
+    plusBtn.textContent = "+";
+    plusBtn.setAttribute("aria-label", "Increase vector " + (i + 1) + " value");
+    bindStepper(plusBtn, () => change(1));
+    row.append(ctrlLabel, minusBtn, plusBtn);
+    // Control groups sit to the left of the "Add a vector" button
+    document.getElementById("vector-controls").insertBefore(row, document.getElementById("addVectorWrap"));
 
-    return { group: g, line, head, dot, label, handle, hit };
+    return { group: g, line, head, dot, label, row };
   };
 
   // Default value for a newly placed vector: +5 east if it fits, otherwise west
@@ -309,35 +313,20 @@
     if (vectors.length >= 3) return;
     const i = vectors.length;
     vectors.push(value);
-    vectorEls.push(createVectorEls(i));
+    vectorEls.push(createVectorEls(i, value));
     updateExercise();
   };
 
   const currentEnd = () => vectors.reduce((s, v) => s + v, 0);
 
-  tokens.forEach((token) => {
-    token.addEventListener("click", () => placeVector(defaultValue(currentEnd())));
-    token.addEventListener("dragstart", (e) => {
-      e.dataTransfer.setData("text/plain", "vector");
-    });
-  });
-
-  const svgWrap = document.getElementById("ex-svg-wrap");
-  svgWrap.addEventListener("dragover", (e) => e.preventDefault());
-  svgWrap.addEventListener("drop", (e) => {
-    e.preventDefault();
-    if (vectors.length >= 3) return;
-    const end = currentEnd();
-    let value = Math.round((svgPointX(e) - 250) / 10 - end);
-    value = Math.min(EX_MAX - end, Math.max(EX_MIN - end, value));
-    if (value === 0) value = defaultValue(end);
-    placeVector(value);
+  document.getElementById("addVectorBtn").addEventListener("click", () => {
+    placeVector(defaultValue(currentEnd()));
   });
 
   showResultantBox.addEventListener("change", updateExercise);
 
   document.getElementById("restart-button").addEventListener("click", () => {
-    vectorEls.forEach((els) => els.group.remove());
+    vectorEls.forEach((els) => { els.group.remove(); els.row.remove(); });
     vectors.length = 0;
     vectorEls.length = 0;
     updateExercise();

@@ -379,34 +379,30 @@
   text-align: center;
 }
 
-/* Vector tray (drag-to-build exercise) */
-.vector-tray {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+/* Stepper buttons: prevent long-press selection so press-and-hold repeat works on touch */
+.generic-button-aero,
+.generic-button-brand,
+.generic-button-success {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.vector-token {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: var(--accent);
-  color: #fff;
+.generic-button-success {
+  background: var(--success);
+  color: var(--raisin-black);
   border: none;
-  border-radius: 999px;
-  padding: 0.45rem 1.1rem;
-  font-weight: 650;
-  cursor: grab;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
 }
 
-.vector-token:hover {
+.generic-button-success:hover {
   filter: brightness(0.9);
-}
-
-.vector-handle {
-  cursor: ew-resize;
-  touch-action: none;
 }
 
 /* Question progress circles */

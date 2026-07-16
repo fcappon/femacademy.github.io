@@ -33,7 +33,7 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" href="../../style.css?v=2" />
-  <link rel="stylesheet" href="../resources.css?v=3" />
+  <link rel="stylesheet" href="../resources.css?v=6" />
 
   <!-- Google Analytics (loaded conditionally based on cookie consent) -->
   <script>
@@ -395,13 +395,7 @@
         <legend class="exercise-name">Exercise: Adding Vectors in 1D</legend>
 
         <!-- 4.1 Interactive number line -->
-        <p>Drag vectors onto the number line to build each problem — on a touchscreen, tap to place them. Click and drag the tip of a vector to change its size and direction. You can place up to three vectors. Tick "Show resultant vector" to check the single vector they add up to. Use <kbd>↻</kbd> to clear the line and start again.</p>
-
-        <div class="vector-tray" id="vector-tray">
-          <button type="button" class="vector-token" draggable="true">⟶ Vector</button>
-          <button type="button" class="vector-token" draggable="true">⟶ Vector</button>
-          <button type="button" class="vector-token" draggable="true">⟶ Vector</button>
-        </div>
+        <p>Click "Add a vector" to place a vector on the number line, then use the <kbd>+</kbd> and <kbd>−</kbd> buttons to change its size and direction: east is positive, west is negative. Press and hold a button to change the value quickly. You can place up to three vectors. Tick "Show resultant vector" to check the single vector they add up to. Use <kbd>↻</kbd> to clear the line and start again.</p>
 
         <div class="interactive-container mx-auto" id="ex-svg-wrap">
           <svg id="exerciseLine" width="500" height="198" viewBox="0 0 500 198" role="img" aria-label="Interactive number line from minus twenty to plus twenty for building vector addition problems, with an optional resultant vector drawn below">
@@ -417,6 +411,13 @@
               <text id="ex-res-label" x="250" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">Resultant</text>
             </g>
           </svg>
+        </div>
+
+        <!-- Per-vector +/− controls (created by JS as vectors are placed) -->
+        <div id="vector-controls" class="controls-row">
+          <div class="controls" id="addVectorWrap">
+            <button id="addVectorBtn" class="btn btn-outline-primary">Add a vector</button>
+          </div>
         </div>
 
         <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mt-2">
@@ -454,7 +455,7 @@
       <!-- END EXERCISE -->
 
       <!-- 4.3 Completion feedback box -->
-      <div id="completion-message" hidden>Well done — all four green! You can now add vectors in one dimension, whatever their signs. This skill sits underneath a huge amount of physics: resultant forces decide whether an object accelerates or stays put, and displacement — not distance — is what velocity is built from. Whenever several quantities act along one line, you now know how to reduce them to a single resultant, and what its sign tells you about direction.</div>
+      <div id="completion-message" hidden>Well done — all four green! If you struggled with any of the questions, click the "New questions" button to practice some more. Vectors are an important concept in physics and understanding the impact that the direction has on your answer is crucial. It is an easy mistake to make and a costly one on your exam! With practice, you'll get it right every time.</div>
 
       <p>Adding vectors along a single line is the foundation for everything that follows. In the next lesson, we will add vectors in two dimensions, where direction can no longer be captured by a simple + or − sign.</p>
 
