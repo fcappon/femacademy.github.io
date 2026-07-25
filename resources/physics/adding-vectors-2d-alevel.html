@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free interactive A-Level Physics lesson on adding vectors by resolving them into components: an interactive component tool, a worked example, and self-checking exercises on resultant vectors and force components." />
+  <title>Adding Vectors by Components (A-Level) — Resolving Vectors | A-Level Physics | FemAcademy</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.fem-academy.com/resources/physics/adding-vectors-2d-alevel.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="FemAcademy" />
+  <meta property="og:title" content="Adding Vectors by Components (A-Level) — Resolving Vectors" />
+  <meta property="og:description" content="Resolve vectors into components, add them axis by axis, and rebuild the resultant — with an interactive tool and self-checking exercises. Free A-Level Physics lesson." />
+  <meta property="og:url" content="https://www.fem-academy.com/resources/physics/adding-vectors-2d-alevel.html" />
+  <meta property="og:image" content="https://www.fem-academy.com/Images/hero-paperbackground.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../Images/ShortLogo-192.png">
+  <link rel="apple-touch-icon" href="../../Images/ShortLogo-192.png">
+
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../../style.css?v=2" />
+  <link rel="stylesheet" href="../resources.css?v=8" />
+
+  <!-- Google Analytics (loaded conditionally based on cookie consent) -->
+  <script>
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (cookieConsent === 'accepted') {
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T764LK08XQ';
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T764LK08XQ');
+    }
+  </script>
+
+  <!-- Structured data: learning resource + breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Adding Vectors by Components (A-Level)",
+    "description": "Interactive A-Level Physics lesson on adding vectors by resolving them into components, with a worked example and self-checking exercises.",
+    "educationalLevel": ["A-Level"],
+    "learningResourceType": "Lesson",
+    "teaches": "Adding vectors by resolving them into perpendicular components",
+    "about": ["Vector Addition", "Resultant Vector", "Pythagoras", "Resolving Vectors", "Vector Components", "Trigonometry"],
+    "educationalAlignment": [
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "AQA A-Level Physics 7408", "targetName": "3.4.1.1 Scalars and vectors" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "Edexcel A-Level Physics 9PH0", "targetName": "Topic 2 Mechanics" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "OCR A A-Level Physics H556", "targetName": "Module 3 Forces and Motion" }
+    ],
+    "inLanguage": "en-GB",
+    "isAccessibleForFree": true,
+    "url": "https://www.fem-academy.com/resources/physics/adding-vectors-2d-alevel.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "FemAcademy",
+      "url": "https://www.fem-academy.com/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Resources", "item": "https://www.fem-academy.com/resources/" },
+      { "@type": "ListItem", "position": 2, "name": "Physics", "item": "https://www.fem-academy.com/resources/" },
+      { "@type": "ListItem", "position": 3, "name": "Adding Vectors by Components (A-Level)" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img
+          src="../../Images/ShortLogo-192.png"
+          alt="FemAcademy logo"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+        />
+        <span class="brand-name">FemAcademy</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/#who-i-help">Who I help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#lessons-and-fees">Lessons and fees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#faq">FAQ</a>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a href="/#contact" class="btn btn-outline-primary btn-sm">
+              Get in touch
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dark Mode Toggle -->
+  <div class="container-fluid">
+    <div class="d-flex justify-content-end align-items-center py-2 px-3">
+      <span class="me-2 text-muted small">Use the switch to toggle between light and dark mode</span>
+      <button id="darkModeToggle" class="toggle-switch" aria-label="Toggle dark mode">
+        <span class="toggle-slider"></span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main" class="container px-4 py-4">
+    <!-- Breadcrumbs -->
+    <nav class="crumbs mb-4" aria-label="Breadcrumb">
+      <ol>
+        <li class="crumb"><a href="/resources/">Resources</a></li>
+        <li class="crumb"><a href="/resources/">Physics</a></li>
+        <li class="crumb" aria-current="page">Adding Vectors by Components (A-Level)</li>
+      </ol>
+    </nav>
+
+    <div class="lesson-content">      <span class="subject-badge">A-Level Physics · Mechanics</span>
+      <h1>Adding Vectors by Components</h1>
+      <p>This is the A-Level companion to the GCSE lesson on <a href="./adding-vectors-2d-gcse.html">adding vectors in two dimensions</a>. There, we found the resultant of two vectors by scale drawing and, where they were perpendicular, by Pythagoras. Here we develop the general method that works for any vectors at any angle: resolving each vector into components.</p>
+
+      <p>Pythagoras alone only helps when the vectors are perpendicular. For every other situation, physicists use a wonderfully general trick: break every vector into perpendicular parts.</p>
+      <p>Any vector V can be split into an x-component, V<sub>x</sub> (how far it points in the east–west direction), and a y-component, V<sub>y</sub> (how far it points in the north–south direction). The two components, joined tip-to-tail, take you from the tail of V to its tip — together they form the vector. Splitting a vector into its components like this is called resolving the vector.</p>
+
+      <!-- INTERACTIVE 2: COMPONENTS OF A VECTOR -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Interactive: Components of a Vector</legend>
+        <p>Use the <kbd>+</kbd> and <kbd>−</kbd> buttons to change V<sub>x</sub> and V<sub>y</sub> separately. The solid arrow is the vector V; the dotted arrows are its two components along the axes.</p>
+
+        <div class="interactive-2d-row">
+          <div class="plot-2d">
+            <svg id="i2Plot" width="500" height="500" viewBox="0 0 500 500" role="img" aria-label="Interactive graph showing a vector drawn from the origin and its two dotted components along the x and y axes">
+              <g id="i2-axes"></g>
+              <line id="i2-cx-line" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 4" />
+              <polygon id="i2-cx-head" fill="var(--brand)" />
+              <circle id="i2-cx-dot" r="5" fill="var(--brand)" style="display: none;" />
+              <text id="i2-cx-label" text-anchor="middle" font-size="13" font-weight="700" fill="var(--brand)">V<tspan font-size="10" dy="3">x</tspan></text>
+              <line id="i2-cy-line" stroke="var(--success)" stroke-width="2" stroke-dasharray="4 4" />
+              <polygon id="i2-cy-head" fill="var(--success)" />
+              <circle id="i2-cy-dot" r="5" fill="var(--success)" style="display: none;" />
+              <text id="i2-cy-label" text-anchor="start" font-size="13" font-weight="700" fill="var(--success)">V<tspan font-size="10" dy="3">y</tspan></text>
+              <line id="i2-v-line" stroke="var(--accent)" stroke-width="3" />
+              <polygon id="i2-v-head" fill="var(--accent)" />
+              <circle id="i2-v-dot" r="6" fill="var(--accent)" style="display: none;" />
+              <text id="i2-v-label" text-anchor="middle" font-size="14" font-weight="700" fill="var(--accent)">V</text>
+              <path id="i2-arc" stroke="var(--text)" stroke-width="1.5" fill="none" />
+              <text id="i2-theta" text-anchor="middle" font-size="14" font-style="italic" fill="var(--text)">θ</text>
+            </svg>
+          </div>
+          <div class="calc-panel">
+            <div>sin θ = V<sub>y</sub> / V</div>
+            <div>cos θ = V<sub>x</sub> / V</div>
+            <div>tan θ = V<sub>y</sub> / V<sub>x</sub></div>
+            <div>V² = V<sub>x</sub>² + V<sub>y</sub>²</div>
+            <div class="explanation-container mt-2">
+              <a id="toggleCalc" role="button" tabindex="0">▼ Show the calculation of V and θ</a>
+              <div id="calcText" style="display: none;" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-row">
+          <div class="controls">
+            <span class="fw-bold">V<sub>x</sub>:</span>
+            <button id="i2vxMinus" class="generic-button-brand" aria-label="Decrease x component">−</button>
+            <button id="i2vxPlus" class="generic-button-brand" aria-label="Increase x component">+</button>
+          </div>
+          <div class="controls">
+            <span class="fw-bold">V<sub>y</sub>:</span>
+            <button id="i2vyMinus" class="generic-button-success" aria-label="Decrease y component">−</button>
+            <button id="i2vyPlus" class="generic-button-success" aria-label="Increase y component">+</button>
+          </div>
+        </div>
+      </fieldset>
+      <!-- END INTERACTIVE 2 -->
+
+      <h3 class="h5 fw-bold mt-4">Two ways to specify a vector</h3>
+      <p>There are two equally correct ways to specify a vector:</p>
+      <p><strong>By its components</strong> — state V<sub>x</sub> and V<sub>y</sub>.</p>
+      <p><strong>By its magnitude and angle</strong> — state its length V and the angle θ it makes with a known direction.</p>
+      <p>Both contain exactly the same information. In physics we usually state a vector by its magnitude and angle — "300 km/h at 45° north of east" means more to a pilot than a pair of components — but we usually calculate with components, because components along the same axis add together just like the 1D vectors of the previous lesson.</p>
+
+      <h3 class="h5 fw-bold mt-4">Converting between the two</h3>
+      <p><strong>From magnitude and angle to components</strong> (θ measured from the positive x-axis):</p>
+      <div class="maths-block">
+        <div><math><msub><mi>V</mi><mi>x</mi></msub><mo>=</mo><mi>V</mi><mspace width="0.17em"></mspace><mi>cos</mi><mspace width="0.17em"></mspace><mi>θ</mi></math></div>
+        <div><math><msub><mi>V</mi><mi>y</mi></msub><mo>=</mo><mi>V</mi><mspace width="0.17em"></mspace><mi>sin</mi><mspace width="0.17em"></mspace><mi>θ</mi></math></div>
+      </div>
+      <p><strong>From components to magnitude and angle:</strong></p>
+      <div class="maths-block">
+        <div><math><mi>V</mi><mo>=</mo><msqrt><msubsup><mi>V</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>V</mi><mi>y</mi><mn>2</mn></msubsup></msqrt></math></div>
+        <div><math><mi>θ</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><msub><mi>V</mi><mi>y</mi></msub><mo>/</mo><msub><mi>V</mi><mi>x</mi></msub><mo>)</mo></mrow></math></div>
+      </div>
+      <p>One caution: the tan⁻¹ button on a calculator always returns an angle between −90° and +90°, so on its own it cannot tell you which quadrant your vector is in. Always sketch the vector first — the sketch tells you the quadrant; the calculation gives you the precise angle.</p>
+
+      <h2>Worked Example: A Hiker's Displacement</h2>
+      <p>A hiker walks 8.0 km east across a valley, then turns and walks 5.0 km in a direction 60.0° north of west. What is her displacement from the start?</p>
+
+      <svg width="500" height="360" viewBox="0 0 500 360" role="img" aria-label="Diagram a: an 8 km east vector, then a 5 km vector at 60 degrees north of west joined tip-to-tail." style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <!-- Axes -->
+        <line x1="40" y1="300" x2="475" y2="300" stroke="var(--text)" stroke-width="2" />
+        <line x1="60" y1="322" x2="60" y2="70" stroke="var(--text)" stroke-width="2" />
+        <line x1="60" y1="296" x2="60" y2="304" stroke="var(--text)" stroke-width="2" />
+        <line x1="150" y1="296" x2="150" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="240" y1="296" x2="240" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="330" y1="296" x2="330" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="420" y1="296" x2="420" y2="304" stroke="var(--text)" stroke-width="1" />
+        <text x="54" y="318" text-anchor="end" font-size="13" fill="var(--text)">0</text>
+        <text x="150" y="318" text-anchor="middle" font-size="13" fill="var(--text)">2</text>
+        <text x="240" y="318" text-anchor="middle" font-size="13" fill="var(--text)">4</text>
+        <text x="330" y="318" text-anchor="middle" font-size="13" fill="var(--text)">6</text>
+        <text x="420" y="318" text-anchor="middle" font-size="13" fill="var(--text)">8</text>
+        <line x1="56" y1="210" x2="64" y2="210" stroke="var(--text)" stroke-width="1" />
+        <line x1="56" y1="120" x2="64" y2="120" stroke="var(--text)" stroke-width="1" />
+        <text x="50" y="214" text-anchor="end" font-size="13" fill="var(--text)">2</text>
+        <text x="50" y="124" text-anchor="end" font-size="13" fill="var(--text)">4</text>
+        <text x="475" y="338" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+        <text x="68" y="66" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">↑ North</text>
+        <!-- D1: 8 km east -->
+        <line x1="60" y1="300" x2="390" y2="300" stroke="var(--accent)" stroke-width="3" />
+        <polygon points="420,300 390,289.5 390,310.5" fill="var(--accent)" />
+        <text x="240" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)">8.0 km</text>
+        <!-- D2: 5 km at 60° north of west -->
+        <line x1="420" y1="300" x2="322.5" y2="131.2" stroke="var(--brand)" stroke-width="3" />
+        <polygon points="307.5,105.2 331.6,125.9 313.4,136.4" fill="var(--brand)" />
+        <text x="372" y="205" text-anchor="start" font-size="13" font-weight="700" fill="var(--brand)">5.0 km</text>
+        <!-- 60° angle from west at the tail of D2 -->
+        <path d="M 385 300 A 35 35 0 0 1 402.5 269.7" stroke="var(--text)" stroke-width="1.5" fill="none" />
+        <text x="374" y="279" text-anchor="end" font-size="13" fill="var(--text)">60°</text>
+        <text x="250" y="352" text-anchor="middle" font-size="13" fill="var(--muted)">(a)</text>
+      </svg>
+
+      <p><strong>Step 1 — Resolve each vector into components.</strong> Choose east as the positive x-direction and north as the positive y-direction.</p>
+      <p>Vector 1 points due east, so it has only an x-component:</p>
+      <div class="maths-block">
+        <div><math><msub><mi>D</mi><mrow><mn>1</mn><mi>x</mi></mrow></msub><mo>=</mo><mo>+</mo><mn>8.0</mn><mtext>&#160;km</mtext><mo>,</mo><mspace width="1.5em"></mspace><msub><mi>D</mi><mrow><mn>1</mn><mi>y</mi></mrow></msub><mo>=</mo><mn>0</mn></math></div>
+      </div>
+      <p>Vector 2 points west and north, so its x-component is negative:</p>
+      <div class="maths-block">
+        <div><math><msub><mi>D</mi><mrow><mn>2</mn><mi>x</mi></mrow></msub><mo>=</mo><mo>−</mo><mo>(</mo><mn>5.0</mn><mtext>&#160;km</mtext><mo>)</mo><mo>(</mo><mi>cos</mi><mspace width="0.17em"></mspace><mn>60.0</mn><mtext>°</mtext><mo>)</mo><mo>=</mo><mo>−</mo><mo>(</mo><mn>5.0</mn><mtext>&#160;km</mtext><mo>)</mo><mo>(</mo><mn>0.500</mn><mo>)</mo><mo>=</mo><mo>−</mo><mn>2.5</mn><mtext>&#160;km</mtext></math></div>
+        <div><math><msub><mi>D</mi><mrow><mn>2</mn><mi>y</mi></mrow></msub><mo>=</mo><mo>+</mo><mo>(</mo><mn>5.0</mn><mtext>&#160;km</mtext><mo>)</mo><mo>(</mo><mi>sin</mi><mspace width="0.17em"></mspace><mn>60.0</mn><mtext>°</mtext><mo>)</mo><mo>=</mo><mo>+</mo><mo>(</mo><mn>5.0</mn><mtext>&#160;km</mtext><mo>)</mo><mo>(</mo><mn>0.866</mn><mo>)</mo><mo>=</mo><mo>+</mo><mn>4.33</mn><mtext>&#160;km</mtext></math></div>
+      </div>
+
+      <svg width="500" height="360" viewBox="0 0 500 360" role="img" aria-label="Diagram b: the 5 km vector resolved into a westward component and a northward component, drawn dotted." style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <!-- Axes -->
+        <line x1="40" y1="300" x2="475" y2="300" stroke="var(--text)" stroke-width="2" />
+        <line x1="60" y1="322" x2="60" y2="70" stroke="var(--text)" stroke-width="2" />
+        <line x1="60" y1="296" x2="60" y2="304" stroke="var(--text)" stroke-width="2" />
+        <line x1="150" y1="296" x2="150" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="240" y1="296" x2="240" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="330" y1="296" x2="330" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="420" y1="296" x2="420" y2="304" stroke="var(--text)" stroke-width="1" />
+        <text x="54" y="318" text-anchor="end" font-size="13" fill="var(--text)">0</text>
+        <text x="150" y="318" text-anchor="middle" font-size="13" fill="var(--text)">2</text>
+        <text x="240" y="318" text-anchor="middle" font-size="13" fill="var(--text)">4</text>
+        <text x="330" y="318" text-anchor="middle" font-size="13" fill="var(--text)">6</text>
+        <text x="420" y="318" text-anchor="middle" font-size="13" fill="var(--text)">8</text>
+        <line x1="56" y1="210" x2="64" y2="210" stroke="var(--text)" stroke-width="1" />
+        <line x1="56" y1="120" x2="64" y2="120" stroke="var(--text)" stroke-width="1" />
+        <text x="50" y="214" text-anchor="end" font-size="13" fill="var(--text)">2</text>
+        <text x="50" y="124" text-anchor="end" font-size="13" fill="var(--text)">4</text>
+        <text x="475" y="338" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+        <text x="68" y="66" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">↑ North</text>
+        <!-- D2 components (dotted) -->
+        <line x1="420" y1="300" x2="337.5" y2="300" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 4" />
+        <polygon points="307.5,300 337.5,289.5 337.5,310.5" fill="var(--brand)" />
+        <text x="375" y="332" text-anchor="middle" font-size="12" fill="var(--brand)">D<tspan font-size="9" dy="2">2x</tspan></text>
+        <line x1="307.5" y1="300" x2="307.5" y2="135.2" stroke="var(--brand)" stroke-width="2" stroke-dasharray="4 4" />
+        <polygon points="307.5,105.2 297,135.2 318,135.2" fill="var(--brand)" />
+        <text x="298" y="224" text-anchor="end" font-size="12" fill="var(--brand)">D<tspan font-size="9" dy="2">2y</tspan></text>
+        <!-- D2: 5 km at 60° north of west -->
+        <line x1="420" y1="300" x2="322.5" y2="131.2" stroke="var(--brand)" stroke-width="3" />
+        <polygon points="307.5,105.2 331.6,125.9 313.4,136.4" fill="var(--brand)" />
+        <text x="372" y="205" text-anchor="start" font-size="13" font-weight="700" fill="var(--brand)">5.0 km</text>
+        <!-- 60° angle from west at the tail of D2 -->
+        <path d="M 385 300 A 35 35 0 0 1 402.5 269.7" stroke="var(--text)" stroke-width="1.5" fill="none" />
+        <text x="374" y="279" text-anchor="end" font-size="13" fill="var(--text)">60°</text>
+        <text x="250" y="352" text-anchor="middle" font-size="13" fill="var(--muted)">(b)</text>
+      </svg>
+
+      <p><strong>Step 2 — Add the components along each axis separately</strong> — this is exactly the 1D addition from the previous lesson:</p>
+      <div class="maths-block">
+        <div><math><msub><mi>R</mi><mi>x</mi></msub><mo>=</mo><msub><mi>D</mi><mrow><mn>1</mn><mi>x</mi></mrow></msub><mo>+</mo><msub><mi>D</mi><mrow><mn>2</mn><mi>x</mi></mrow></msub><mo>=</mo><mn>8.0</mn><mo>+</mo><mo>(</mo><mo>−</mo><mn>2.5</mn><mo>)</mo><mo>=</mo><mo>+</mo><mn>5.5</mn><mtext>&#160;km</mtext></math></div>
+        <div><math><msub><mi>R</mi><mi>y</mi></msub><mo>=</mo><msub><mi>D</mi><mrow><mn>1</mn><mi>y</mi></mrow></msub><mo>+</mo><msub><mi>D</mi><mrow><mn>2</mn><mi>y</mi></mrow></msub><mo>=</mo><mn>0</mn><mo>+</mo><mn>4.33</mn><mo>=</mo><mo>+</mo><mn>4.33</mn><mtext>&#160;km</mtext></math></div>
+      </div>
+      <p><strong>Step 3 — Rebuild the resultant from its components:</strong></p>
+      <div class="maths-block">
+        <div><math><mi>R</mi><mo>=</mo><msqrt><msubsup><mi>R</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>R</mi><mi>y</mi><mn>2</mn></msubsup></msqrt><mo>=</mo><msqrt><mn>30.25</mn><mo>+</mo><mn>18.75</mn></msqrt><mo>=</mo><msqrt><mn>49.0</mn></msqrt><mo>=</mo><mn>7.0</mn><mtext>&#160;km</mtext></math></div>
+        <div><math><mi>tan</mi><mspace width="0.17em"></mspace><mi>θ</mi><mo>=</mo><msub><mi>R</mi><mi>y</mi></msub><mo>/</mo><msub><mi>R</mi><mi>x</mi></msub><mo>=</mo><mn>4.33</mn><mo>/</mo><mn>5.5</mn><mo>=</mo><mn>0.787</mn><mspace width="1em"></mspace><mo>→</mo><mspace width="1em"></mspace><mi>θ</mi><mo>=</mo><mn>38.2</mn><mtext>°</mtext></math></div>
+      </div>
+      <svg width="500" height="360" viewBox="0 0 500 360" role="img" aria-label="Diagram c: the two displacement vectors joined tip-to-tail with the 7 km resultant drawn from the origin at angle theta north of east." style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <!-- Axes -->
+        <line x1="40" y1="300" x2="475" y2="300" stroke="var(--text)" stroke-width="2" />
+        <line x1="60" y1="322" x2="60" y2="70" stroke="var(--text)" stroke-width="2" />
+        <line x1="60" y1="296" x2="60" y2="304" stroke="var(--text)" stroke-width="2" />
+        <line x1="150" y1="296" x2="150" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="240" y1="296" x2="240" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="330" y1="296" x2="330" y2="304" stroke="var(--text)" stroke-width="1" />
+        <line x1="420" y1="296" x2="420" y2="304" stroke="var(--text)" stroke-width="1" />
+        <text x="54" y="318" text-anchor="end" font-size="13" fill="var(--text)">0</text>
+        <text x="150" y="318" text-anchor="middle" font-size="13" fill="var(--text)">2</text>
+        <text x="240" y="318" text-anchor="middle" font-size="13" fill="var(--text)">4</text>
+        <text x="330" y="318" text-anchor="middle" font-size="13" fill="var(--text)">6</text>
+        <text x="420" y="318" text-anchor="middle" font-size="13" fill="var(--text)">8</text>
+        <line x1="56" y1="210" x2="64" y2="210" stroke="var(--text)" stroke-width="1" />
+        <line x1="56" y1="120" x2="64" y2="120" stroke="var(--text)" stroke-width="1" />
+        <text x="50" y="214" text-anchor="end" font-size="13" fill="var(--text)">2</text>
+        <text x="50" y="124" text-anchor="end" font-size="13" fill="var(--text)">4</text>
+        <text x="475" y="338" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+        <text x="68" y="66" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">↑ North</text>
+        <!-- D1: 8 km east -->
+        <line x1="60" y1="300" x2="390" y2="300" stroke="var(--accent)" stroke-width="3" />
+        <polygon points="420,300 390,289.5 390,310.5" fill="var(--accent)" />
+        <text x="240" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)">8.0 km</text>
+        <!-- D2: 5 km at 60° north of west -->
+        <line x1="420" y1="300" x2="322.5" y2="131.2" stroke="var(--brand)" stroke-width="3" />
+        <polygon points="307.5,105.2 331.6,125.9 313.4,136.4" fill="var(--brand)" />
+        <text x="372" y="205" text-anchor="start" font-size="13" font-weight="700" fill="var(--brand)">5.0 km</text>
+        <!-- Resultant -->
+        <line x1="60" y1="300" x2="283.9" y2="123.7" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+        <polygon points="307.5,105.2 290.4,132 277.4,115.5" fill="var(--accent)" />
+        <text x="165" y="200" text-anchor="end" font-size="13" font-weight="700" fill="var(--accent)">R = 7.0 km</text>
+        <!-- Angle arc -->
+        <path d="M 100 300 A 40 40 0 0 0 91.4 275.3" stroke="var(--text)" stroke-width="1.5" fill="none" />
+        <text x="106" y="288" text-anchor="start" font-size="13" fill="var(--text)"><tspan font-style="italic">θ</tspan> = 38.2°</text>
+        <text x="250" y="352" text-anchor="middle" font-size="13" fill="var(--muted)">(c)</text>
+      </svg>
+
+      <p>The hiker's displacement is 7.0 km at 38.2° north of east.</p>
+      <p>Notice what the components did: they turned one 2D problem into two 1D problems, one along each axis. That is the whole method — and it works for any number of vectors at any angles.</p>
+
+      <!-- EXERCISE SET 1: RESULTANT VECTORS -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Exercise: Resultant Vectors</legend>
+        <p>Answer the questions below, then press <kbd>Enter</kbd> or click Check. Give magnitudes as whole numbers and angles in degrees to 1 decimal place. The three circles show your progress — a circle turns green when you answer that type of question correctly. Click "New question" at any time for different numbers.</p>
+
+        <div class="progress-circles" role="group" aria-label="Question progress">
+          <button type="button" class="progress-circle" id="ex1-circle-0" aria-label="Question type 1"></button>
+          <button type="button" class="progress-circle" id="ex1-circle-1" aria-label="Question type 2"></button>
+          <button type="button" class="progress-circle" id="ex1-circle-2" aria-label="Question type 3"></button>
+        </div>
+
+        <p id="ex1-question" class="fw-bold"></p>
+
+        <div class="answer-row">
+          <span>Magnitude:</span>
+          <input type="text" id="ex1-mag" inputmode="decimal" aria-label="Magnitude of the resultant">
+          <span id="ex1-mag-unit" class="answer-unit">km</span>
+          <span class="ms-2">Angle:</span>
+          <input type="text" id="ex1-ang" inputmode="decimal" aria-label="Angle in degrees">
+          <span class="answer-unit">°</span>
+          <button id="ex1-check" class="qa-button">Check</button>
+          <button id="ex1-new" class="qa-button-secondary">New question</button>
+        </div>
+
+        <div class="feedback-container">
+          <p id="ex1-feedback" aria-live="polite"></p>
+        </div>
+
+        <div id="ex1-complete" class="notice-box" hidden>Well done — all three green! You can now find a resultant from perpendicular vectors with Pythagoras, and read a vector's direction from an angle or a sign. Next, two harder problems where the vectors are not perpendicular to start with — this is where resolving into components earns its keep.</div>
+      </fieldset>
+      <!-- END EXERCISE SET 1 -->
+
+      <!-- GUIDED EXERCISE: DRONE -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Guided Exercise: A Drone's Velocity Components</legend>
+        <p class="fw-bold">A drone flies at a steady <span id="gx-v"></span> m/s in a direction <span id="gx-theta"></span>° west of north. (a) Find the northerly and westerly components of its velocity. (b) How far north and how far west has the drone travelled after <span id="gx-t"></span> minutes?</p>
+
+        <svg id="gxPlot" width="400" height="320" viewBox="0 0 400 320" role="img" aria-label="Diagram showing the drone's velocity vector on an x and y grid, pointing west of north, with the angle measured from the y-axis, which points north" style="max-width: 100%; height: auto; display: block; margin: 0 auto 1rem;">
+          <!-- Axes -->
+          <line x1="40" y1="280" x2="380" y2="280" stroke="var(--text)" stroke-width="2" />
+          <line x1="300" y1="310" x2="300" y2="30" stroke="var(--text)" stroke-width="2" />
+          <text x="390" y="285" text-anchor="middle" font-size="14" font-style="italic" fill="var(--text)">x</text>
+          <text x="292" y="26" text-anchor="end" font-size="14" font-style="italic" fill="var(--text)">y</text>
+          <text x="308" y="42" text-anchor="start" font-size="11" font-style="italic" fill="var(--muted)">north</text>
+          <text x="378" y="270" text-anchor="end" font-size="11" font-style="italic" fill="var(--muted)">east</text>
+          <!-- Ticks -->
+          <line x1="50" y1="276" x2="50" y2="284" stroke="var(--text)" stroke-width="1" />
+          <line x1="100" y1="276" x2="100" y2="284" stroke="var(--text)" stroke-width="1" />
+          <line x1="150" y1="276" x2="150" y2="284" stroke="var(--text)" stroke-width="1" />
+          <line x1="200" y1="276" x2="200" y2="284" stroke="var(--text)" stroke-width="1" />
+          <line x1="250" y1="276" x2="250" y2="284" stroke="var(--text)" stroke-width="1" />
+          <line x1="350" y1="276" x2="350" y2="284" stroke="var(--text)" stroke-width="1" />
+          <line x1="296" y1="230" x2="304" y2="230" stroke="var(--text)" stroke-width="1" />
+          <line x1="296" y1="180" x2="304" y2="180" stroke="var(--text)" stroke-width="1" />
+          <line x1="296" y1="130" x2="304" y2="130" stroke="var(--text)" stroke-width="1" />
+          <line x1="296" y1="80" x2="304" y2="80" stroke="var(--text)" stroke-width="1" />
+          <!-- Velocity vector (drawn by JS for the current question) -->
+          <line id="gx-v-line" stroke="var(--accent)" stroke-width="3" />
+          <polygon id="gx-v-head" fill="var(--accent)" />
+          <circle id="gx-v-dot" r="6" fill="var(--accent)" style="display: none;" />
+          <text id="gx-v-label" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)"></text>
+          <path id="gx-arc" stroke="var(--text)" stroke-width="1.5" fill="none" />
+          <text id="gx-arc-label" text-anchor="middle" font-size="13" fill="var(--text)"></text>
+        </svg>
+
+        <p>Work through the steps below — each answer is checked before you move on. Sketch the vector first: the angle is measured from north, not from the x-axis!</p>
+
+        <div class="guided-step" id="gx-step-1">
+          <p><span class="step-tick">✓</span>The angle is measured from north, so north is the adjacent side of the triangle: v<sub>N</sub> = v cos θ. Calculate the north component, to 1 decimal place.</p>
+          <div class="answer-row">
+            <input type="text" id="gx-in-1" inputmode="decimal" aria-label="North component of velocity">
+            <span class="answer-unit">m/s</span>
+            <button id="gx-check-1" class="qa-button">Check</button>
+          </div>
+          <div class="feedback-container"><p id="gx-fb-1" aria-live="polite"></p></div>
+        </div>
+
+        <div class="guided-step d-none" id="gx-step-2">
+          <p><span class="step-tick">✓</span>West is the opposite side: v<sub>W</sub> = v sin θ. Calculate the west component, to 1 decimal place.</p>
+          <div class="answer-row">
+            <input type="text" id="gx-in-2" inputmode="decimal" aria-label="West component of velocity">
+            <span class="answer-unit">m/s</span>
+            <button id="gx-check-2" class="qa-button">Check</button>
+          </div>
+          <div class="feedback-container"><p id="gx-fb-2" aria-live="polite"></p></div>
+        </div>
+
+        <div class="guided-step d-none" id="gx-step-3">
+          <p><span class="step-tick">✓</span>Distance = speed × time. Convert <span id="gx-t2"></span> minutes to seconds, then find how far north the drone has travelled: d<sub>N</sub> = v<sub>N</sub> × t. Give your answer in metres.</p>
+          <div class="answer-row">
+            <input type="text" id="gx-in-3" inputmode="decimal" aria-label="Distance travelled north in metres">
+            <span class="answer-unit">m</span>
+            <button id="gx-check-3" class="qa-button">Check</button>
+          </div>
+          <div class="feedback-container"><p id="gx-fb-3" aria-live="polite"></p></div>
+        </div>
+
+        <div class="guided-step d-none" id="gx-step-4">
+          <p><span class="step-tick">✓</span>Now the same for the westerly distance: d<sub>W</sub> = v<sub>W</sub> × t.</p>
+          <div class="answer-row">
+            <input type="text" id="gx-in-4" inputmode="decimal" aria-label="Distance travelled west in metres">
+            <span class="answer-unit">m</span>
+            <button id="gx-check-4" class="qa-button">Check</button>
+          </div>
+          <div class="feedback-container"><p id="gx-fb-4" aria-live="polite"></p></div>
+        </div>
+
+        <div id="gx-complete" class="notice-box" hidden>Nicely done. Notice the pattern: resolve the vector, then treat each direction as its own 1D problem. You will use exactly this pattern in projectile motion.</div>
+
+        <button id="gx-new" class="qa-button-secondary mt-2">New question</button>
+      </fieldset>
+      <!-- END GUIDED EXERCISE -->
+
+      <!-- UNGUIDED EXERCISE: FORCE COMPONENTS -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Exercise: Force Components — Now On Your Own</legend>
+        <p class="fw-bold">A gardener pulls a garden roller with a force of <span id="fx-F"></span> N along a handle that makes an angle of <span id="fx-theta"></span>° above the horizontal. Find the horizontal and vertical components of the force, each to 1 decimal place.</p>
+        <p>No steps this time — but this problem works exactly like the drone question above. Sketch the right-angled triangle, decide which component is adjacent to the given angle, then use cos and sin.</p>
+
+        <div class="answer-row">
+          <span>Horizontal:</span>
+          <input type="text" id="fx-h" inputmode="decimal" aria-label="Horizontal component of the force">
+          <span class="answer-unit">N</span>
+          <span class="ms-2">Vertical:</span>
+          <input type="text" id="fx-v" inputmode="decimal" aria-label="Vertical component of the force">
+          <span class="answer-unit">N</span>
+          <button id="fx-check" class="qa-button">Check</button>
+          <button id="fx-new" class="qa-button-secondary">New question</button>
+        </div>
+
+        <div class="feedback-container">
+          <p id="fx-feedback" aria-live="polite"></p>
+        </div>
+
+        <div id="fx-complete" class="notice-box" hidden>Correct on your own — that is the skill exams test. The horizontal component is the part of the pull that moves the roller forward; the vertical component slightly lifts it. Splitting a force like this is something you will do constantly at A-Level.</div>
+      </fieldset>
+      <!-- END UNGUIDED EXERCISE -->
+
+      <p>That completes the groundwork on vectors. If you would like more practice on the mathematics itself, look out for our mathematics resources on vectors — but what you have learned here is enough to carry you through GCSE and A-Level Physics.</p>
+      <p>You will meet these ideas again and again: in projectile motion, where velocity is resolved into horizontal and vertical components; in forces and equilibrium, where resultant forces decide whether and how objects accelerate; in momentum, where 2D collisions are solved component by component; in moments and torque, where only the perpendicular component of a force does the turning; and in circular motion and in electric and magnetic fields, where direction is everything. Master components now, and every one of those topics becomes easier.</p>
+
+      <details class="spec-box">
+        <summary>Where this fits in your exam specification</summary>
+        <div class="spec-box-table">
+          <table>
+            <thead><tr><th>Exam board</th><th>Topic</th></tr></thead>
+            <tbody>
+              <tr><td>AQA A-Level Physics</td><td>3.4.1.1 Scalars and vectors (resolving)</td></tr>
+              <tr><td>Edexcel A-Level Physics</td><td>Topic 2 — Mechanics</td></tr>
+              <tr><td>OCR A A-Level Physics</td><td>Module 3 — Forces and Motion</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="spec-box-note">Studying a different exam board? The method is the same — only the topic name differs.</p>
+      </details>
+
+      <!-- Lesson pagination -->
+      <div class="lesson-pagination">
+        <a href="./adding-vectors-2d-gcse.html" class="btn btn-outline-primary">← Previous: Adding Vectors in 2D (GCSE)</a>
+        <a href="/resources/" class="btn btn-brand">Finish lesson ✓</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-top mt-5">
+    <div class="container py-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="text-muted small mb-0">© <span id="year"></span> FemAcademy — London, UK. All rights reserved.</p>
+        <p class="mb-0">
+          <a href="/" class="text-decoration-none small">Home</a>
+          <span class="text-muted mx-2">·</span>
+          <a href="/resources/" class="text-decoration-none small">Resources</a>
+          <span class="text-muted mx-2">·</span>
+          <a href="/#contact" class="text-decoration-none small">Get in touch</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../../script.js?v=2"></script>
+  <script src="./adding-vectors-2d-alevel.js?v=1"></script>
+</body>
+</html>

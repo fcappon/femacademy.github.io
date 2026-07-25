@@ -487,6 +487,104 @@
   color: var(--accent);
 }
 
+/* A-Level chip next to section headings */
+.level-chip {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+/* Soft grey notice box (reusable version of the completion-message style) */
+.notice-box {
+  background: var(--soft-bg);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+/* Two-dimensional interactive: plot beside a live calculation panel */
+.interactive-2d-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.plot-2d {
+  flex: 1 1 300px;
+  max-width: 430px;
+  text-align: center;
+}
+
+.plot-2d svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.calc-panel {
+  flex: 1 1 240px;
+  max-width: 330px;
+  background: var(--soft-bg);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* Worked-calculation maths lines (native MathML) */
+.maths-block {
+  font-size: 1rem;
+  line-height: 2.1;
+  margin: 0.75rem 0 0.75rem 1rem;
+}
+
+.maths-block math {
+  font-size: 1.1rem;
+}
+
+/* Stage task line: fixed space so the diagram below never shifts */
+.stage-task {
+  min-height: 3.2em;
+}
+
+@media (max-width: 575.98px) {
+  .stage-task {
+    min-height: 6.5em;
+  }
+}
+
+/* Guided exercise steps */
+.guided-step {
+  border-left: 3px solid var(--card-border);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+}
+
+.guided-step.done {
+  border-left-color: var(--success);
+}
+
+.guided-step .step-tick {
+  color: var(--success);
+  font-weight: 700;
+  margin-right: 0.35rem;
+  display: none;
+}
+
+.guided-step.done .step-tick {
+  display: inline;
+}
+
 /* "Where this fits in your exam spec" box */
 .spec-box {
   border: 1px solid var(--card-border);

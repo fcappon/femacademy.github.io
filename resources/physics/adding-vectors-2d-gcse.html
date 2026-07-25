@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free interactive GCSE Physics lesson on adding two vectors in 2D: why simple adding fails, Pythagoras for perpendicular vectors, and finding the resultant by scale drawing with a draggable ruler and protractor." />
+  <title>Adding Vectors in Two Dimensions (GCSE) — Scale Drawing of Resultant Forces | GCSE Physics | FemAcademy</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.fem-academy.com/resources/physics/adding-vectors-2d-gcse.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="FemAcademy" />
+  <meta property="og:title" content="Adding Vectors in Two Dimensions (GCSE) — Scale Drawing" />
+  <meta property="og:description" content="Why simple adding fails, Pythagoras for perpendicular vectors, and finding the resultant by scale drawing with a draggable ruler and protractor. Free GCSE Physics lesson." />
+  <meta property="og:url" content="https://www.fem-academy.com/resources/physics/adding-vectors-2d-gcse.html" />
+  <meta property="og:image" content="https://www.fem-academy.com/Images/hero-paperbackground.jpg" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../Images/ShortLogo-192.png">
+  <link rel="apple-touch-icon" href="../../Images/ShortLogo-192.png">
+
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../../style.css?v=2" />
+  <link rel="stylesheet" href="../resources.css?v=8" />
+
+  <!-- Google Analytics (loaded conditionally based on cookie consent) -->
+  <script>
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (cookieConsent === 'accepted') {
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T764LK08XQ';
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T764LK08XQ');
+    }
+  </script>
+
+  <!-- Structured data: learning resource + breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Adding Vectors in Two Dimensions (GCSE)",
+    "description": "Interactive GCSE Physics lesson on adding two vectors in two dimensions and finding the resultant by scale drawing.",
+    "educationalLevel": ["GCSE"],
+    "learningResourceType": "Lesson",
+    "teaches": "Adding two vectors in two dimensions and finding the resultant by scale drawing",
+    "about": ["Vector Addition", "Resultant Vector", "Pythagoras", "Resolving Vectors", "Vector Components", "Trigonometry"],
+    "educationalAlignment": [
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "AQA GCSE Physics 8463", "targetName": "4.5.1.4 Resultant forces" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "Edexcel GCSE Physics 1PH0", "targetName": "Topic 2 Motion and Forces" },
+      { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "educationalFramework": "OCR Gateway GCSE Physics A J249", "targetName": "Topic P2 Forces" }
+    ],
+    "inLanguage": "en-GB",
+    "isAccessibleForFree": true,
+    "url": "https://www.fem-academy.com/resources/physics/adding-vectors-2d-gcse.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "FemAcademy",
+      "url": "https://www.fem-academy.com/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Resources", "item": "https://www.fem-academy.com/resources/" },
+      { "@type": "ListItem", "position": 2, "name": "Physics", "item": "https://www.fem-academy.com/resources/" },
+      { "@type": "ListItem", "position": 3, "name": "Adding Vectors in 2D (GCSE)" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img
+          src="../../Images/ShortLogo-192.png"
+          alt="FemAcademy logo"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+        />
+        <span class="brand-name">FemAcademy</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/#who-i-help">Who I help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/resources/">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#lessons-and-fees">Lessons and fees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#faq">FAQ</a>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a href="/#contact" class="btn btn-outline-primary btn-sm">
+              Get in touch
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dark Mode Toggle -->
+  <div class="container-fluid">
+    <div class="d-flex justify-content-end align-items-center py-2 px-3">
+      <span class="me-2 text-muted small">Use the switch to toggle between light and dark mode</span>
+      <button id="darkModeToggle" class="toggle-switch" aria-label="Toggle dark mode">
+        <span class="toggle-slider"></span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main" class="container px-4 py-4">
+    <!-- Breadcrumbs -->
+    <nav class="crumbs mb-4" aria-label="Breadcrumb">
+      <ol>
+        <li class="crumb"><a href="/resources/">Resources</a></li>
+        <li class="crumb"><a href="/resources/">Physics</a></li>
+        <li class="crumb" aria-current="page">Adding Vectors in 2D (GCSE)</li>
+      </ol>
+    </nav>
+
+    <div class="lesson-content">
+      <span class="subject-badge">GCSE Physics · Forces and Motion</span>
+      <h1>Adding Vectors in Two Dimensions</h1>
+      <p>In the previous lesson, we added vectors along a single straight line. In this lesson, we are going to look at addition of  two-dimensional vectors (2D).</p>
+      <p>When we are working in two dimensions we can no longer simply add the vectors together — they must be added in a specific way. There are two ways to do this: graphically and by components, in this lesson we are going to look at both. But before we do — let's start by explaining why we can no longer just add the two vectors together.</p>
+
+      <h2>Why Simple Adding No Longer Works</h2>
+      <p>Suppose a person walks 5 km east and then 10 km north. If we added the values the way we did in the previous lesson, we would get 5 + 10 = 15 km. That is, however, the total distance the person walked — but we are looking for the displacement. We can draw the two distances in a graph - like you can see below, the positive y axis is pointing north and the positive x axis east. The 5.0 km vectors runs from the origin to the right, and the 10 km vector runs from the tip of the first vector straight up. After this walk the person is now 10 km north and 5 km east of the point of origin. The resultant displacement is the vector from the origin to this finishing point, which is not equal to the sum of the individual displacements.</p>
+
+      <svg width="500" height="470" viewBox="0 0 500 470" role="img" aria-label="Graph with east–west and north–south axes showing a 5 km east vector, then a 10 km north vector tip-to-tail, with the resultant displacement drawn from the origin to the finishing point." style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <!-- Axes -->
+        <line x1="50" y1="410" x2="470" y2="410" stroke="var(--text)" stroke-width="2" />
+        <line x1="110" y1="470" x2="110" y2="50" stroke="var(--text)" stroke-width="2" />
+        <!-- x ticks (every 1 km, labels every 5) -->
+        <line x1="50" y1="406" x2="50" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="80" y1="406" x2="80" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="110" y1="404" x2="110" y2="416" stroke="var(--text)" stroke-width="2" />
+        <line x1="140" y1="406" x2="140" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="170" y1="406" x2="170" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="200" y1="406" x2="200" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="230" y1="406" x2="230" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="260" y1="404" x2="260" y2="416" stroke="var(--text)" stroke-width="2" />
+        <line x1="290" y1="406" x2="290" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="320" y1="406" x2="320" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="350" y1="406" x2="350" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="380" y1="406" x2="380" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="410" y1="404" x2="410" y2="416" stroke="var(--text)" stroke-width="2" />
+        <line x1="440" y1="406" x2="440" y2="414" stroke="var(--text)" stroke-width="1" />
+        <line x1="470" y1="406" x2="470" y2="414" stroke="var(--text)" stroke-width="1" />
+        <text x="104" y="432" text-anchor="end" font-size="13" fill="var(--text)">0</text>
+        <text x="260" y="432" text-anchor="middle" font-size="13" fill="var(--text)">5</text>
+        <text x="410" y="432" text-anchor="middle" font-size="13" fill="var(--text)">10</text>
+        <!-- y ticks -->
+        <line x1="106" y1="470" x2="114" y2="470" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="440" x2="114" y2="440" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="380" x2="114" y2="380" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="350" x2="114" y2="350" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="320" x2="114" y2="320" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="290" x2="114" y2="290" stroke="var(--text)" stroke-width="1" />
+        <line x1="104" y1="260" x2="116" y2="260" stroke="var(--text)" stroke-width="2" />
+        <line x1="106" y1="230" x2="114" y2="230" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="200" x2="114" y2="200" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="170" x2="114" y2="170" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="140" x2="114" y2="140" stroke="var(--text)" stroke-width="1" />
+        <line x1="104" y1="110" x2="116" y2="110" stroke="var(--text)" stroke-width="2" />
+        <line x1="106" y1="80" x2="114" y2="80" stroke="var(--text)" stroke-width="1" />
+        <line x1="106" y1="50" x2="114" y2="50" stroke="var(--text)" stroke-width="1" />
+        <text x="98" y="264" text-anchor="end" font-size="13" fill="var(--text)">5</text>
+        <text x="98" y="114" text-anchor="end" font-size="13" fill="var(--text)">10</text>
+        <!-- Axis names -->
+        <text x="470" y="452" text-anchor="end" font-size="12" font-style="italic" fill="var(--muted)">East →</text>
+        <text x="118" y="62" text-anchor="start" font-size="12" font-style="italic" fill="var(--muted)">↑ North</text>
+        <!-- Vector 1: 5 km east -->
+        <line x1="110" y1="410" x2="230" y2="410" stroke="var(--accent)" stroke-width="3" />
+        <polygon points="260,410 230,399.5 230,420.5" fill="var(--accent)" />
+        <text x="212" y="394" text-anchor="middle" font-size="13" font-weight="700" fill="var(--accent)">5 km east</text>
+        <!-- Vector 2: 10 km north, tip-to-tail -->
+        <line x1="260" y1="410" x2="260" y2="140" stroke="var(--brand)" stroke-width="3" />
+        <polygon points="260,110 249.5,140 270.5,140" fill="var(--brand)" />
+        <text x="272" y="262" text-anchor="start" font-size="13" font-weight="700" fill="var(--brand)">10 km north</text>
+        <!-- Resultant -->
+        <line x1="110" y1="410" x2="246.6" y2="136.8" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+        <polygon points="260,110 256,141.5 237.2,132.1" fill="var(--accent)" />
+        <text text-anchor="end" font-size="13" font-weight="700" fill="var(--accent)"><tspan x="198" y="196">Resultant</tspan><tspan x="198" y="212">displacement</tspan></text>
+        <!-- Angle arc -->
+        <path d="M 155 410 A 45 45 0 0 0 130.1 369.8" stroke="var(--text)" stroke-width="1.5" fill="none" />
+        <text x="159" y="392" text-anchor="start" font-size="14" font-style="italic" fill="var(--text)">θ</text>
+      </svg>
+
+      <h2>Finding the Resultant Displacement Graphically</h2>
+      <p>The first way to find the resultant displacement is to draw the vectors carefully to scale and then measure it — a ruler for the length and a protractor for the angle. I would strongly encourage you to try this on a piece of paper in front of you. First draw 5 km east, then draw 10 km north, tip-to-tail, taking 1 cm to represent 1 km. Then measure from where you started, the origin, to the endpoint. If you did it correctly, you will find the person is about 11.2 km from the origin. Measuring the angle with a protractor gives about 63° north of east. This is exactly what you need to be able to do for GCSE — you can <a href="#scale-drawing">practise drawing and measuring vector diagrams with the scale-drawing activity below</a>.</p>
+      <p>But drawing and measuring takes time, and your answer is only as good as your drawing. Where the two vectors are perpendicular (at right angles to each other), there is a more precise mathematical approach: Pythagoras' theorem.</p>
+
+      <div class="maths-block">
+        <div><math><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><msup><mrow><mo>(</mo><mn>5</mn><mtext>&#160;km</mtext><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mn>10</mn><mtext>&#160;km</mtext><mo>)</mo></mrow><mn>2</mn></msup></math></div>
+        <div><math><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mn>25</mn><mtext>&#160;</mtext><msup><mtext>km</mtext><mn>2</mn></msup><mo>+</mo><mn>100</mn><mtext>&#160;</mtext><msup><mtext>km</mtext><mn>2</mn></msup><mo>=</mo><mn>125</mn><mtext>&#160;</mtext><msup><mtext>km</mtext><mn>2</mn></msup></math></div>
+        <div><math><mi>R</mi><mo>=</mo><msqrt><mn>125</mn></msqrt><mo>≈</mo><mn>11.2</mn><mtext>&#160;km</mtext></math></div>
+      </div>
+
+      <p>Pythagoras gives us the length of the resultant, but not its direction. For the angle we turn to trigonometry. The two vectors and the resultant form a right-angled triangle, so the tangent of the angle θ — measured from east, turning towards north — is the opposite side (the 10 km north) over the adjacent side (the 5 km east):</p>
+
+      <div class="maths-block">
+        <div><math><mi>tan</mi><mspace width="0.17em"></mspace><mi>θ</mi><mo>=</mo><mtext>opposite</mtext><mo>/</mo><mtext>adjacent</mtext><mo>=</mo><mn>10</mn><mo>/</mo><mn>5</mn><mo>=</mo><mn>2</mn></math></div>
+        <div><math><mi>θ</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>(</mo><mn>2</mn><mo>)</mo><mo>≈</mo><mn>63.4</mn><mtext>°</mtext></math></div>
+      </div>
+
+      <p>So the resultant displacement is 11.2 km at about 63.4° north of east — which matches the angle we measured from the scale drawing.</p>
+
+      <p>Remember: Pythagoras and this tangent calculation only work when the two vectors are perpendicular — exactly the case here. When the vectors are not at right angles, we use the more general method of components, coming up later in this lesson.</p>
+
+      <div class="notice-box">So the total displacement is 11.2 km, not 15 km. The 15 km is the distance the person travelled. Remember from the first lesson: distance and displacement are not the same thing — one is a vector, the other is a scalar.</div>
+
+      <!-- INTERACTIVE 1: ADDING PERPENDICULAR VECTORS -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Interactive: Adding Two Vectors</legend>
+        <p>Use the <kbd>+</kbd> and <kbd>−</kbd> buttons to change the x and y components of each vector. The second vector is joined to the first tip-to-tail, and the resultant is drawn from the origin to the tip of the second vector. Watch the calculation update as you change the vectors.</p>
+
+        <div class="interactive-2d-row">
+          <div class="plot-2d">
+            <svg id="i1Plot" width="500" height="500" viewBox="0 0 500 500" role="img" aria-label="Interactive graph with x and y axes showing two vectors joined tip-to-tail and their resultant drawn from the origin">
+              <g id="i1-axes"></g>
+              <line id="i1-va-line" stroke="var(--accent)" stroke-width="3" />
+              <polygon id="i1-va-head" fill="var(--accent)" />
+              <circle id="i1-va-dot" r="6" fill="var(--accent)" style="display: none;" />
+              <text id="i1-va-label" text-anchor="middle" font-size="14" font-weight="700" fill="var(--accent)">V<tspan font-size="10" dy="3">1</tspan></text>
+              <line id="i1-vb-line" stroke="var(--brand)" stroke-width="3" />
+              <polygon id="i1-vb-head" fill="var(--brand)" />
+              <circle id="i1-vb-dot" r="6" fill="var(--brand)" style="display: none;" />
+              <text id="i1-vb-label" text-anchor="middle" font-size="14" font-weight="700" fill="var(--brand)">V<tspan font-size="10" dy="3">2</tspan></text>
+              <line id="i1-res-line" stroke="var(--accent)" stroke-width="5" stroke-dasharray="8 4" />
+              <polygon id="i1-res-head" fill="var(--accent)" />
+              <circle id="i1-res-dot" r="6" fill="var(--accent)" style="display: none;" />
+            </svg>
+          </div>
+          <div class="calc-panel" id="i1-calc" aria-live="polite"></div>
+        </div>
+
+        <div class="controls-row">
+          <div class="controls">
+            <span class="fw-bold">Vector 1:</span>
+            <em>x</em>
+            <button id="i1v1xMinus" class="generic-button-aero" aria-label="Decrease vector 1 x component">−</button>
+            <button id="i1v1xPlus" class="generic-button-aero" aria-label="Increase vector 1 x component">+</button>
+            <em>y</em>
+            <button id="i1v1yMinus" class="generic-button-aero" aria-label="Decrease vector 1 y component">−</button>
+            <button id="i1v1yPlus" class="generic-button-aero" aria-label="Increase vector 1 y component">+</button>
+          </div>
+          <div class="controls">
+            <span class="fw-bold">Vector 2:</span>
+            <em>x</em>
+            <button id="i1v2xMinus" class="generic-button-brand" aria-label="Decrease vector 2 x component">−</button>
+            <button id="i1v2xPlus" class="generic-button-brand" aria-label="Increase vector 2 x component">+</button>
+            <em>y</em>
+            <button id="i1v2yMinus" class="generic-button-brand" aria-label="Decrease vector 2 y component">−</button>
+            <button id="i1v2yPlus" class="generic-button-brand" aria-label="Increase vector 2 y component">+</button>
+          </div>
+        </div>
+
+        <p class="mt-3 mb-1"><strong>Try it:</strong> can you set the two vectors so the resultant disappears completely (R = 0)? Once you manage it, look closely at Vector 1 and Vector 2 — what has to be true about them?</p>
+        <div class="explanation-container">
+          <a id="toggleThink" role="button" tabindex="0">▼ Show Answer (Click to expand)</a>
+          <div id="thinkText" style="display: none;">
+            <p>The resultant is zero only when the second vector exactly undoes the first: the same length but the opposite direction, so its components are the negatives of the first vector's — for example, Vector 1 = (4, 3) and Vector 2 = (−4, −3). The two arrows then form a closed path, finishing exactly where they started. This is the 2D version of the cancelling you saw in 1D, and it is the key idea behind balanced forces: when the resultant force on an object is zero, the object stays still or keeps moving at constant velocity.</p>
+          </div>
+        </div>
+      </fieldset>
+      <!-- END INTERACTIVE 1 -->
+
+      <h2 id="scale-drawing">Practise: finding the resultant by scale drawing</h2>
+      <p>When two forces act on an object at an angle to each other, together they act like a single force called the resultant. One way to find it is a scale drawing: draw each force as an arrow whose length stands for its size, then join them tip to tail — the tail of the second arrow starts at the tip (arrowhead) of the first. The resultant runs from the start of the first arrow to the tip of the last.</p>
+      <p>Once the diagram is drawn accurately to scale, you can measure the resultant straight off the page: its length gives the magnitude (using your scale) and a protractor gives its direction. Finding the resultant of two forces this way is exactly the skill that exam questions on resultant forces are testing — and the same method works for any vectors, whether forces, displacements or velocities.</p>
+
+      <!-- INTERACTIVE: DRAW AND MEASURE -->
+      <fieldset class="exercise-container">
+        <legend class="exercise-name">Interactive: Draw and Measure — Tip-to-Tail</legend>
+        <p>Each question gives you two forces on a full x–y grid. Work through the four stages below: place the forces tip to tail, draw the resultant, then measure its length and direction. Drag with a mouse or your finger — everything snaps to the grid unless you untick "Snap to grid". A progress circle turns green as you finish each stage. In this diagram, each grid square represents 1 N. Complete all four exercises to finish.</p>
+
+        <p id="tt-progress" class="fw-bold text-center mb-3" aria-live="polite" style="color: var(--accent); font-size: 1.2rem;"></p>
+
+        <div class="progress-circles justify-content-center" role="group" aria-label="Stage progress">
+          <span class="progress-circle" id="tt-circle-0" aria-label="Stage 1: place the vectors"></span>
+          <span class="progress-circle" id="tt-circle-1" aria-label="Stage 2: place the resultant"></span>
+          <span class="progress-circle" id="tt-circle-2" aria-label="Stage 3: measure the length"></span>
+          <span class="progress-circle" id="tt-circle-3" aria-label="Stage 4: measure the angle"></span>
+        </div>
+
+        <p id="tt-task" class="fw-bold stage-task" aria-live="polite"></p>
+
+        <p class="fw-bold text-center mb-2">Scale: each grid square represents 1 N.</p>
+
+        <div class="interactive-2d-row">
+          <div class="plot-2d" style="max-width: 540px;">
+            <svg id="ttPlot" width="540" height="540" viewBox="0 0 540 540" role="img" aria-label="Interactive four-quadrant grid for placing two forces tip to tail and measuring the resultant with a ruler and protractor. Each grid square represents 1 newton.">
+              <g id="tt-grid"></g>
+              <g id="tt-vectors"></g>
+              <g id="tt-ruler" style="display: none;"></g>
+              <g id="tt-protractor" style="display: none;"></g>
+            </svg>
+          </div>
+          <div class="calc-panel" id="tt-given" aria-live="polite">
+            <div class="fw-bold mb-2">You are given two forces:</div>
+            <div class="mb-1"><span style="color: var(--accent); font-weight: 700;">Force 1</span> = <span id="tt-f1"></span></div>
+            <div><span style="color: var(--brand); font-weight: 700;">Force 2</span> = <span id="tt-f2"></span></div>
+            <div class="text-muted small mt-2">Angles are measured anticlockwise from the right. Find the size and direction of the resultant.</div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mt-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="tt-snap" checked>
+            <label class="form-check-label" for="tt-snap">Snap to grid</label>
+          </div>
+          <button id="tt-demo" class="qa-button-secondary">▶ Watch demo</button>
+          <button id="tt-next" class="qa-button d-none">Next exercise →</button>
+          <button id="tt-restart" class="qa-button-secondary d-none">Start again</button>
+        </div>
+
+        <p id="tt-ruler-hint" class="text-muted small text-center mt-2 d-none">The ruler is a fixed length — drag it to slide it around, and drag the orange <span aria-hidden="true">⟳</span> dot to rotate it so it lines up along the resultant. Read the length where the arrow tip meets the scale.</p>
+
+        <div class="answer-row d-none" id="tt-len-row">
+          <span>Length of the resultant:</span>
+          <input type="text" id="tt-len" inputmode="decimal" aria-label="Measured length of the resultant in newtons">
+          <span class="answer-unit">N</span>
+          <button id="tt-len-check" class="qa-button">Check</button>
+        </div>
+
+        <div class="answer-row d-none" id="tt-ang-row">
+          <span>Angle from the right (anticlockwise):</span>
+          <input type="text" id="tt-ang" inputmode="decimal" aria-label="Measured angle of the resultant in degrees">
+          <span class="answer-unit">°</span>
+          <button id="tt-ang-check" class="qa-button">Check</button>
+        </div>
+
+        <div class="feedback-container">
+          <p id="tt-feedback" aria-live="polite"></p>
+        </div>
+
+        <div id="tt-complete" class="notice-box" hidden>Well done. You joined the two forces tip to tail, drew the resultant from the start point, and measured its size and direction. That is the complete scale-drawing method — exactly what an exam question on the resultant of two forces is asking you to do.</div>
+
+        <div id="tt-session-complete" class="notice-box" hidden>That's all four exercises complete — brilliant work. You have practised the full method, including the special case where two equal and opposite forces give a zero resultant. Ready for the real thing? Have a go at the printable worksheet below, drawing every diagram by hand.</div>
+      </fieldset>
+      <!-- END INTERACTIVE -->
+
+      <h2>Now practise on paper</h2>
+      <p>This interactive does some of the work for you — it snaps to the grid and hands you the two forces ready-drawn. In the exam it is different: you are given the two forces and a blank grid, and <strong>you</strong> have to construct each arrow to scale with a ruler and protractor, join them tip to tail, then measure the resultant. Drawing the vectors yourself is the skill the marks are for, so it is well worth practising by hand.</p>
+      <p>Download the worksheet below, grab a pencil, ruler and protractor, and draw each pair of forces to scale on the grids provided. Take your time lining up the protractor — neat drawing is what earns the marks. Full worked answers are on the last page, so you can check yourself.</p>
+      <p class="mb-4">
+        <a href="./tip-to-tail-practice.pdf" class="btn btn-brand" download>Download the practice worksheet (PDF)</a>
+      </p>
+
+      <details class="spec-box">
+        <summary>Where this fits in your exam specification</summary>
+        <div class="spec-box-table">
+          <table>
+            <thead><tr><th>Exam board</th><th>Topic</th></tr></thead>
+            <tbody>
+              <tr><td>AQA GCSE Physics</td><td>4.5.1.4 Resultant forces (Higher Tier)</td></tr>
+              <tr><td>Edexcel GCSE Physics</td><td>Topic 2 — Motion and Forces (CP2)</td></tr>
+              <tr><td>OCR Gateway GCSE Physics</td><td>Topic P2 — Forces</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="spec-box-note">Studying a different board or combined science? The content of this lesson is the same — only the topic name differs.</p>
+      </details>
+
+      <!-- Lesson pagination -->
+      <div class="lesson-pagination">
+        <a href="./adding-vectors-1d.html" class="btn btn-outline-primary">← Previous: Adding Vectors in 1D</a>
+        <a href="./adding-vectors-2d-alevel.html" class="btn btn-brand">Next: Adding Vectors by Components (A-Level) →</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-top mt-5">
+    <div class="container py-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="text-muted small mb-0">© <span id="year"></span> FemAcademy — London, UK. All rights reserved.</p>
+        <p class="mb-0">
+          <a href="/" class="text-decoration-none small">Home</a>
+          <span class="text-muted mx-2">·</span>
+          <a href="/resources/" class="text-decoration-none small">Resources</a>
+          <span class="text-muted mx-2">·</span>
+          <a href="/#contact" class="text-decoration-none small">Get in touch</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../../script.js?v=2"></script>
+  <script src="./adding-vectors-2d-gcse.js?v=1"></script>
+  <script src="./tip-to-tail.js?v=3"></script>
+</body>
+</html>
