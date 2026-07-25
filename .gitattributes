@@ -1,0 +1,10 @@
+# Treat binary assets as binary so Git never applies line-ending conversion
+# (CRLF conversion would corrupt these files, e.g. a PDF's byte-offset table).
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
