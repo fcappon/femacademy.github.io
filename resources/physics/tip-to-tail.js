@@ -369,6 +369,8 @@
   const applyStage = () => {
     circles.forEach((c, i) => c.classList.toggle("current", i === stage - 1 && !c.classList.contains("solved")));
     document.getElementById("tt-ruler-hint").classList.toggle("d-none", stage !== 3);
+    // "Reset ruler & protractor" is only useful while measuring (stages 3–4)
+    document.getElementById("tt-reset-tools").classList.toggle("d-none", stage !== 3 && stage !== 4);
     if (stage === 1) {
       setTask("Stage 1: Drag the two forces so they sit tip to tail, starting at the origin.");
     } else if (stage === 2) {
@@ -528,6 +530,14 @@
   /* ============================================================
      Reset / session flow (a set of four exercises, one equilibrium)
      ============================================================ */
+  // Return the ruler and protractor to their starting positions and redraw them
+  const resetToolPositions = () => {
+    rul.ax = -GRID; rul.ay = -GRID + 0.5; rul.phi = 0;
+    prot.cx = 4; prot.cy = -3;
+    renderRuler();
+    renderProtractor();
+  };
+
   // Reset the board for a freshly generated exercise (equilibrium flag already set)
   const resetBoard = () => {
     stage = 1;
@@ -542,10 +552,7 @@
     document.getElementById("tt-protractor").style.display = "none";
     document.getElementById("tt-complete").setAttribute("hidden", "");
     document.getElementById("tt-next").classList.add("d-none");
-    rul.ax = -GRID; rul.ay = -GRID + 0.5; rul.phi = 0;
-    prot.cx = 4; prot.cy = -3;
-    renderRuler();
-    renderProtractor();
+    resetToolPositions();
     vecEls.v1.group.style.display = "block";
     vecEls.v2.group.style.display = "block";
     vecEls.r.group.style.display = "none";
@@ -574,6 +581,8 @@
     if (exerciseIndex < SESSION_LEN - 1) { exerciseIndex++; loadExercise(); }
   });
   document.getElementById("tt-restart").addEventListener("click", startSession);
+  // Bring the ruler and protractor back to their starting positions (rescue if dragged off-screen)
+  document.getElementById("tt-reset-tools").addEventListener("click", resetToolPositions);
 
   /* ============================================================
      Demo: animate the full step-by-step process, then hand the
