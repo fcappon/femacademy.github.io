@@ -531,6 +531,14 @@
   height: auto;
 }
 
+/* The tip-to-tail tool must claim touch gestures on the grid — otherwise a
+   touchscreen treats a drag as a page scroll and cancels it. Applied to the
+   whole SVG (Safari does not reliably honour touch-action on SVG children).
+   Users still scroll the page from the text and controls around the grid. */
+#ttPlot {
+  touch-action: none;
+}
+
 .calc-panel {
   flex: 1 1 240px;
   max-width: 330px;
